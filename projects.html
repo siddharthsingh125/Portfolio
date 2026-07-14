@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View Sachin Satwal's frontend web development projects and CRO case studies including Betashares and QUT Online.">
+    <title>Featured Projects & Case Studies | Sachin Satwal</title>
+    <!-- Fonts & CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Premium Loader Overlay -->
+    <div class="loader-overlay">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <div class="loader-logo">SACHIN<span>.SATWAL</span></div>
+        </div>
+    </div>
+
+    <!-- Background Decoration -->
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <div class="background-grid"></div>
+
+    <!-- Sticky Navigation Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">SACHIN<span>SATWAL</span></a>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="experience.html" class="nav-link">Experience</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <a href="https://wa.me/918534972633" target="_blank" class="nav-cta"><i class="fab fa-whatsapp"></i> +91 8534972633 Let's Talk</a>
+
+            <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Panel Navigation -->
+    <div class="mobile-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Let's Talk</a>
+    </div>
+
+    <main style="padding-top: var(--header-height);">
+        <!-- Projects Section -->
+        <section>
+            <div class="container">
+                <div class="reveal">
+                    <span class="section-subtitle">My Work</span>
+                    <h1 class="section-title">Featured Projects</h1>
+                    <p class="section-description">A curated selection of real-world client projects. Designed and developed with focus on clean layout code and UX optimization. I have also built multiple other projects demonstrating various functionalities and extensive testing scenarios.</p>
+                </div>
+
+                <div class="projects-grid reveal">
+                    <!-- Project card 1: Cart Page Upsell Module -->
+                    <article class="glass-card project-card">
+                        <div class="project-media" style="display: flex; flex-direction: column;">
+                            <div class="project-image-switcher" style="flex-shrink: 0;">
+                                <button class="switcher-btn active" onclick="switchProjectImage(this, 'before')">Before</button>
+                                <button class="switcher-btn" onclick="switchProjectImage(this, 'after')">After</button>
+                            </div>
+                            <div class="vertical-scroll-container" style="flex: 1;">
+                                <img src="assets/Nominal control image.png" alt="Control - Before Upsell" class="scroll-image project-img-before">
+                                <img src="assets/Nominal variation image.png" alt="Variation - After Upsell" class="scroll-image project-img-after" style="display: none;">
+                            </div>
+                            <button class="expand-image-btn" aria-label="View Full Image" onclick="openFullscreenVertical(this)"><i class="fas fa-expand"></i></button>
+                        </div>
+                        
+                        <div class="project-body">
+                            <div class="project-meta-row" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                                <span class="project-meta-tag" style="color: var(--accent-teal); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;">A/B Testing</span>
+                                <span class="project-meta-industry" style="color: var(--text-muted); font-size: 0.8rem;">E-Commerce / CRO</span>
+                            </div>
+                            <h3 class="project-name" style="margin-bottom: 0.75rem; font-size: 1.35rem;">Cart Page Upsell Module Optimization</h3>
+                            
+                            <!-- Premium Green Highlight Box -->
+                            <div class="project-highlight-box">
+                                Optimized the cart page checkout experience by introducing complementary accessories with a frictionless one-click opt-in, lifting Average Order Value (AOV).
+                            </div>
+                            
+                            <p class="project-desc" style="margin-bottom: 1.5rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                                Designed and tested a lightweight cart-page module allowing customers to add extension chains or gift packaging with a single tap, updating order totals dynamically.
+                            </p>
+                            
+                            <div class="project-card-footer">
+                                <span class="project-tech-summary">HTML, CSS, JS, VWO, A/B Testing</span>
+                                <button class="btn btn-primary btn-case-study" data-target="#case-study-modal-upsell" style="padding: 0.6rem 1.4rem; font-size: 0.85rem; border-radius: var(--radius-sm); border: none; cursor: pointer;">
+                                    View Case Study <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project card 2: Air Purifiers Product Page Redesign -->
+                    <article class="glass-card project-card">
+                        <div class="project-media" style="display: flex; flex-direction: column;">
+                            <div class="vertical-scroll-container" style="flex: 1;">
+                                <img src="assets/Air purifier image.png" alt="Air Purifiers Webpage" class="scroll-image">
+                            </div>
+                            <button class="expand-image-btn" aria-label="View Full Image" onclick="openFullscreenVertical(this)"><i class="fas fa-expand"></i></button>
+                        </div>
+                        
+                        <div class="project-body">
+                            <div class="project-meta-row" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                                <span class="project-meta-tag" style="color: var(--accent-teal); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;">A/B Testing</span>
+                                <span class="project-meta-industry" style="color: var(--text-muted); font-size: 0.8rem;">E-Commerce / Electronics</span>
+                            </div>
+                            <h3 class="project-name" style="margin-bottom: 0.75rem; font-size: 1.35rem;">Air Purifiers Product Page Redesign</h3>
+                            
+                            <!-- Premium Green Highlight Box -->
+                            <div class="project-highlight-box">
+                                Developed and optimized multiple A/B testing variations for the Air Purifiers product listing page, focusing on improving product discovery and purchase intent.
+                            </div>
+                            
+                            <p class="project-desc" style="margin-bottom: 1.5rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                                Implemented comprehensive page redesigns, refined responsive layouts, integrated dynamic pricing display based on sale status, and added Affirm financing messages.
+                            </p>
+                            
+                            <div class="project-card-footer">
+                                <span class="project-tech-summary">HTML, CSS, JS, A/B Testing, CRO</span>
+                                <button class="btn btn-primary btn-case-study" data-target="#case-study-modal-airpurifier" style="padding: 0.6rem 1.4rem; font-size: 0.85rem; border-radius: var(--radius-sm); border: none; cursor: pointer;">
+                                    View Case Study <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project card 3: Navigation Mega Menu Optimization -->
+                    <article class="glass-card project-card">
+                        <div class="project-media" style="display: flex; flex-direction: column;">
+                            <div class="project-image-switcher" style="flex-shrink: 0;">
+                                <button class="switcher-btn active" onclick="switchProjectImage(this, 'before')">Before</button>
+                                <button class="switcher-btn" onclick="switchProjectImage(this, 'after')">After</button>
+                            </div>
+                            <div class="vertical-scroll-container" style="flex: 1;">
+                                <img src="assets/monal university control image.png" alt="Control - Before Navigation" class="scroll-image project-img-before">
+                                <img src="assets/monash university version image.png" alt="Variation - After Navigation" class="scroll-image project-img-after" style="display: none;">
+                            </div>
+                            <button class="expand-image-btn" aria-label="View Full Image" onclick="openFullscreenVertical(this)"><i class="fas fa-expand"></i></button>
+                        </div>
+                        
+                        <div class="project-body">
+                            <div class="project-meta-row" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                                <span class="project-meta-tag" style="color: var(--accent-teal); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;">A/B Testing</span>
+                                <span class="project-meta-industry" style="color: var(--text-muted); font-size: 0.8rem;">Education / E-Learning</span>
+                            </div>
+                            <h3 class="project-name" style="margin-bottom: 0.75rem; font-size: 1.35rem;">Navigation Mega Menu Optimization</h3>
+                            
+                            <!-- Premium Green Highlight Box -->
+                            <div class="project-highlight-box">
+                                Refined and optimized a responsive mega menu across desktop and mobile to improve course discoverability and navigation engagement.
+                            </div>
+                            
+                            <p class="project-desc" style="margin-bottom: 1.5rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                                Designed and tested three mega menu variations. Fixed navigation duplicate labels, menu behaviors, mobile scrolling issues, and arrow alignments during QA.
+                            </p>
+                            
+                            <div class="project-card-footer">
+                                <span class="project-tech-summary">HTML, CSS, JS, VWO, CRO Testing</span>
+                                <button class="btn btn-primary btn-case-study" data-target="#case-study-modal-megamenu" style="padding: 0.6rem 1.4rem; font-size: 0.85rem; border-radius: var(--radius-sm); border: none; cursor: pointer;">
+                                    View Case Study <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project card 4: Sliding Mini Cart Redesign -->
+                    <article class="glass-card project-card">
+                        <div class="project-media" style="display: flex; flex-direction: column;">
+                            <div class="project-image-switcher" style="flex-shrink: 0;">
+                                <button class="switcher-btn active" onclick="switchProjectImage(this, 'before')">Before</button>
+                                <button class="switcher-btn" onclick="switchProjectImage(this, 'after')">After</button>
+                            </div>
+                            <div class="vertical-scroll-container" style="flex: 1;">
+                                <img src="assets/Dr SEBI CELL FOOD CONTROL.png" alt="Control - Before Mini Cart" class="scroll-image project-img-before">
+                                <img src="assets/Dr SEBI CELL FOOD VERSION.png" alt="Variation - After Mini Cart" class="scroll-image project-img-after" style="display: none;">
+                            </div>
+                            <button class="expand-image-btn" aria-label="View Full Image" onclick="openFullscreenVertical(this)"><i class="fas fa-expand"></i></button>
+                        </div>
+                        
+                        <div class="project-body">
+                            <div class="project-meta-row" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                                <span class="project-meta-tag" style="color: var(--accent-teal); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;">A/B Testing</span>
+                                <span class="project-meta-industry" style="color: var(--text-muted); font-size: 0.8rem;">E-Commerce / Health</span>
+                            </div>
+                            <h3 class="project-name" style="margin-bottom: 0.75rem; font-size: 1.35rem;">Sliding Mini Cart Redesign</h3>
+                            
+                            <!-- Premium Green Highlight Box -->
+                            <div class="project-highlight-box">
+                                Built an interactive sliding mini cart from scratch using active cart APIs to circumvent structural notification limitations and optimize conversion flow.
+                            </div>
+                            
+                            <p class="project-desc" style="margin-bottom: 1.5rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                                Enabled multiple product listings, interactive quantity controls, item removal actions, sale pricing, and a clear checkout CTA in a responsive interface.
+                            </p>
+                            
+                            <div class="project-card-footer">
+                                <span class="project-tech-summary">HTML, CSS, JS, API Integration</span>
+                                <button class="btn btn-primary btn-case-study" data-target="#case-study-modal-minicart" style="padding: 0.6rem 1.4rem; font-size: 0.85rem; border-radius: var(--radius-sm); border: none; cursor: pointer;">
+                                    View Case Study <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project card 5: Application Form Redesign -->
+                    <article class="glass-card project-card">
+                        <div class="project-media" style="display: flex; flex-direction: column;">
+                            <div class="project-image-switcher" style="flex-shrink: 0;">
+                                <button class="switcher-btn active" onclick="switchProjectImage(this, 'before')">Before</button>
+                                <button class="switcher-btn" onclick="switchProjectImage(this, 'after')">After</button>
+                            </div>
+                            <div class="vertical-scroll-container" style="flex: 1;">
+                                <img src="assets/FEDERATION ONLINE IMAGE CONTROL.png" alt="Control - Before App Form" class="scroll-image project-img-before">
+                                <img src="assets/FEDERATION ONLINE IMAGE VERSION.png" alt="Variation - After App Form" class="scroll-image project-img-after" style="display: none;">
+                            </div>
+                            <button class="expand-image-btn" aria-label="View Full Image" onclick="openFullscreenVertical(this)"><i class="fas fa-expand"></i></button>
+                        </div>
+                        
+                        <div class="project-body">
+                            <div class="project-meta-row" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                                <span class="project-meta-tag" style="color: var(--accent-teal); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;">A/B Testing</span>
+                                <span class="project-meta-industry" style="color: var(--text-muted); font-size: 0.8rem;">Education / Online Learning</span>
+                            </div>
+                            <h3 class="project-name" style="margin-bottom: 0.75rem; font-size: 1.35rem;">Application Form Redesign & UX</h3>
+                            
+                            <!-- Premium Green Highlight Box -->
+                            <div class="project-highlight-box">
+                                Redesigned a long enrolment page with dynamic sticky banners, dual scrolling forms, and file upload systems to elevate completion rates.
+                            </div>
+                            
+                            <p class="project-desc" style="margin-bottom: 1.5rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                                Optimized mobile zooming behaviors on iOS, adjusted sticky banner layouts, and improved layout consistency across screens for cross-browser reliability.
+                            </p>
+                            
+                            <div class="project-card-footer">
+                                <span class="project-tech-summary">HTML, CSS, JS, Form UX Optimization</span>
+                                <button class="btn btn-primary btn-case-study" data-target="#case-study-modal-appform" style="padding: 0.6rem 1.4rem; font-size: 0.85rem; border-radius: var(--radius-sm); border: none; cursor: pointer;">
+                                    View Case Study <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project card 6: College Project E-Commerce Website -->
+                    <article class="glass-card project-card">
+                        <div class="carousel-slider">
+                            <div class="carousel-slides">
+                                <div class="carousel-slide-item">
+                                    <img src="assets/COLLEGE PROJECT1.png" alt="Mobile Shopee Home">
+                                </div>
+                                <div class="carousel-slide-item">
+                                    <img src="assets/COLLEGE PROJECT2.png" alt="Mobile Shopee Product Grid">
+                                </div>
+                                <div class="carousel-slide-item">
+                                    <img src="assets/COLLEGE PROJECT3.png" alt="Mobile Shopee Cart View">
+                                </div>
+                                <div class="carousel-slide-item">
+                                    <img src="assets/COLLEGE PROJECT4.png" alt="Mobile Shopee Checkout">
+                                </div>
+                                <div class="carousel-slide-item">
+                                    <img src="assets/COLLEGE PROJECT5.png" alt="Mobile Shopee Product Detail">
+                                </div>
+                            </div>
+                            
+                            <!-- Navigation Controls -->
+                            <button class="carousel-btn prev-btn" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+                            <button class="carousel-btn next-btn" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+                            
+                            <!-- Dot Indicators -->
+                            <div class="carousel-dots">
+                                <span class="carousel-dot active" data-slide="0"></span>
+                                <span class="carousel-dot" data-slide="1"></span>
+                                <span class="carousel-dot" data-slide="2"></span>
+                                <span class="carousel-dot" data-slide="3"></span>
+                                <span class="carousel-dot" data-slide="4"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-body">
+                            <div class="project-meta-row" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                                <span class="project-meta-tag" style="color: var(--accent-teal); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;">Full Stack Dev</span>
+                                <span class="project-meta-industry" style="color: var(--text-muted); font-size: 0.8rem;">Academic Project (BCA)</span>
+                            </div>
+                            <h3 class="project-name" style="margin-bottom: 0.75rem; font-size: 1.35rem;">E-Commerce Web Application</h3>
+                            
+                            <!-- Premium Green Highlight Box -->
+                            <div class="project-highlight-box">
+                                Designed and developed a fully responsive online shopping portal (Mobile Shopee) featuring authentication, dynamic databases, and product listings.
+                            </div>
+                            
+                            <p class="project-desc" style="margin-bottom: 1.5rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                                Programmed frontend layout and styles integrated with a backend PHP architecture and MySQL database management system for secure registrations and carts.
+                            </p>
+                            
+                            <div class="project-card-footer">
+                                <span class="project-tech-summary">HTML, CSS, JS, PHP, MySQL, Git</span>
+                                <button class="btn btn-primary btn-case-study" data-target="#case-study-modal-college" style="padding: 0.6rem 1.4rem; font-size: 0.85rem; border-radius: var(--radius-sm); border: none; cursor: pointer;">
+                                    View Case Study <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand-col">
+                <a href="index.html" class="footer-brand-logo">SACHIN<span>SATWAL</span></a>
+                <p class="footer-brand-desc">
+                    Frontend Developer and CRO Specialist building responsive, high-converting interfaces for clients worldwide.
+                </p>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4 class="footer-col-title">Navigation</h4>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="experience.html" class="footer-link">Experience</a>
+                    <a href="projects.html" class="footer-link">Projects</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+            </div>
+
+            <div class="footer-links-col">
+                <h4 class="footer-col-title">Reach Out</h4>
+                <div class="footer-contact-info">
+                    <p><i class="fas fa-envelope" style="color: var(--accent-indigo); margin-right: 0.5rem;"></i> sidharthsinghgh@gmail.com</p>
+                    <p><i class="fas fa-phone" style="color: var(--accent-indigo); margin-right: 0.5rem;"></i> +91 8534972633</p>
+                    <p><i class="fas fa-location-dot" style="color: var(--accent-indigo); margin-right: 0.5rem;"></i> Almora, Uttarakhand, India</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2026 Sachin Satwal. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/siddharthsingh125/" target="_blank" rel="noopener noreferrer" class="social-icon" style="width: 38px; height: 38px; font-size: 1rem;"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" style="width: 38px; height: 38px; font-size: 1rem;"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal 1: Upsell Module Case Study -->
+    <div class="case-study-modal" id="case-study-modal-upsell">
+        <div class="modal-overlay"></div>
+        <div class="modal-container glass-card">
+            <button class="modal-close" aria-label="Close Case Study">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-tag">A/B Testing | E-Commerce Conversion</span>
+                <h2 class="modal-title">Cart Page Upsell Module Optimization</h2>
+                <p class="modal-subtitle">A Conversion Rate Optimization case study delivering Average Order Value growth.</p>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <!-- Challenge Column -->
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-circle-exclamation text-gradient-primary"></i> Challenge</h3>
+                            <p>The cart page offered no opportunity to promote complementary products before checkout, limiting the potential to increase Average Order Value (AOV). The goal was to introduce relevant upsell options without disrupting the customer's purchase journey or creating unnecessary friction.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Solution Column -->
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-lightbulb text-gradient-teal"></i> Solution</h3>
+                            <p>We designed a lightweight upsell module featuring two optional accessories—Chain Extender and Gift Box. Customers could add either item with a single click directly from the cart page, while those who chose not to engage experienced no changes to their cart, ensuring a seamless checkout flow.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <!-- Our Approach Section -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-route text-gradient-primary"></i> Our Approach</h3>
+                    <p>We began by reviewing the client's hypothesis and understanding the desired business outcome. After analyzing the existing cart experience, we identified the ideal placement for the upsell component and validated product eligibility with the client. The solution was implemented using a clean, non-intrusive interface that aligned with the existing design system. Finally, comprehensive Manual QA and Cross-Browser Testing ensured reliable functionality before deployment.</p>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <!-- Key Features Section -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-square-check text-gradient-teal"></i> Key Features & Implementation</h3>
+                    <ul class="modal-features-list">
+                        <li>Introduced two optional cart-page upsell products.</li>
+                        <li>One-click opt-in functionality for a frictionless experience.</li>
+                        <li>Automatic cart update when an upsell is selected.</li>
+                        <li>Cart total remains unchanged if no option is selected.</li>
+                        <li>Responsive implementation across desktop, tablet, and mobile.</li>
+                        <li>Cross-browser compatibility testing.</li>
+                        <li>Manual QA testing to validate cart behavior.</li>
+                        <li>Maintained consistent UI with the existing checkout experience.</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <!-- Impact Delivered Section -->
+                <div class="modal-full-section highlight-bg">
+                    <h3><i class="fas fa-chart-line text-gradient-primary"></i> Impact Delivered</h3>
+                    <p>The implementation provided a scalable upsell framework that supports future CRO initiatives while preserving a smooth checkout experience. The experiment was designed to encourage higher Average Order Value, improve upsell adoption, and generate measurable insights through A/B Testing without introducing unnecessary user friction.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Air Purifiers Case Study -->
+    <div class="case-study-modal" id="case-study-modal-airpurifier">
+        <div class="modal-overlay"></div>
+        <div class="modal-container glass-card">
+            <button class="modal-close" aria-label="Close Case Study">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-tag">A/B Testing | E-Commerce / Consumer Electronics</span>
+                <h2 class="modal-title">Air Purifiers Product Page Redesign</h2>
+                <p class="modal-subtitle">Desktop & Mobile A/B Testing for product discovery and purchase intent optimization.</p>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <!-- Challenge Column -->
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-circle-exclamation text-gradient-primary"></i> Challenge</h3>
+                            <p>The client wanted to redesign the entire product listing page to help customers compare products more effectively and increase product views, add-to-cart actions, and purchases. Throughout development, multiple rounds of feedback introduced additional UI updates, pricing logic changes, responsive improvements, CTA refinements, and comparison table enhancements while maintaining consistency across desktop and mobile experiences.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Solution Column -->
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-lightbulb text-gradient-teal"></i> Solution</h3>
+                            <p>Implemented multiple responsive A/B testing variations based on approved Figma designs and client feedback. The redesign focused on improving product presentation, simplifying purchasing decisions, enhancing call-to-action visibility, and maintaining a seamless shopping experience across all devices.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <!-- Our Approach Section -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-route text-gradient-primary"></i> Our Approach</h3>
+                    <p>We analyzed the approved wireframes and built multiple desktop and mobile experiment variations using reusable frontend components. After each client review, UI refinements were implemented, including pricing logic updates, CTA improvements, responsive image optimization, comparison table enhancements, and mobile usability fixes. Every iteration was validated through Manual QA and Cross-Browser Testing to ensure production readiness.</p>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <!-- Key Features Section -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-square-check text-gradient-teal"></i> Key Features & Implementation</h3>
+                    <ul class="modal-features-list">
+                        <li>Developed multiple A/B testing variations for desktop and mobile.</li>
+                        <li>Built a complete responsive product page redesign.</li>
+                        <li>Implemented dynamic pricing display based on sale status.</li>
+                        <li>Added Affirm financing messaging.</li>
+                        <li>Optimized product cards for improved visibility.</li>
+                        <li>Updated comparison table layout with integrated Add to Cart buttons.</li>
+                        <li>Replaced mobile hero images with optimized responsive assets.</li>
+                        <li>Removed unnecessary "See Details" buttons and highlighted primary Add to Cart CTAs.</li>
+                        <li>Removed outdated content sections as requested by the client.</li>
+                        <li>Fixed responsive banner rendering issues.</li>
+                        <li>Implemented multiple design revisions based on client feedback.</li>
+                        <li>Performed comprehensive Manual QA and Cross-Browser Testing.</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <!-- Impact Delivered Section -->
+                <div class="modal-full-section highlight-bg">
+                    <h3><i class="fas fa-chart-line text-gradient-primary"></i> Impact Delivered</h3>
+                    <p>The redesigned product page delivered a cleaner, more conversion-focused shopping experience while improving product comparison and purchase flow. The modular implementation allowed rapid iteration throughout the testing process and provided a strong foundation for measuring engagement, add-to-cart behavior, and conversion performance through A/B testing.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Mega Menu Case Study -->
+    <div class="case-study-modal" id="case-study-modal-megamenu">
+        <div class="modal-overlay"></div>
+        <div class="modal-container glass-card">
+            <button class="modal-close" aria-label="Close Case Study">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-tag">A/B Testing | Education / E-Learning</span>
+                <h2 class="modal-title">Navigation Mega Menu Optimization</h2>
+                <p class="modal-subtitle">Desktop & Mobile A/B Test for course discovery and navigation UX.</p>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <!-- Challenge Column -->
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-circle-exclamation text-gradient-primary"></i> Challenge</h3>
+                            <p>The client aimed to test multiple mega menu variations across desktop and mobile to improve navigation and course discoverability. During QA review, several UI inconsistencies were identified, including incorrect menu layouts, text duplication, dropdown behavior, arrow alignment, scrolling issues on mobile, and interaction inconsistencies.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Solution Column -->
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-lightbulb text-gradient-teal"></i> Solution</h3>
+                            <p>Implemented design revisions based on client feedback to ensure each variation matched the approved mockups. The navigation was refined for improved usability, responsive behavior, and accessibility while maintaining a consistent experience across desktop and mobile devices.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <!-- Our Approach Section -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-route text-gradient-primary"></i> Our Approach</h3>
+                    <p>We carefully reviewed the approved Figma designs and implemented three navigation variations—two for desktop and one for mobile. After the initial development, we collaborated with the client to address UI feedback, corrected layout inconsistencies, improved dropdown interactions, enhanced mobile scrolling, and ensured responsive behavior through comprehensive QA testing across different browsers and devices.</p>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <!-- Key Features Section -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-square-check text-gradient-teal"></i> Key Features & Implementation</h3>
+                    <ul class="modal-features-list">
+                        <li>Developed responsive mega menu for desktop and mobile.</li>
+                        <li>Implemented multiple A/B testing navigation variations.</li>
+                        <li>Matched the interface with approved Figma designs.</li>
+                        <li>Fixed navigation labels and duplicate text occurrences.</li>
+                        <li>Improved dropdown interaction and specialist study menus.</li>
+                        <li>Corrected arrow alignment and clickable target areas.</li>
+                        <li>Resolved mobile scrolling issues inside navigation drawer.</li>
+                        <li>Enhanced responsive behavior across all screen sizes.</li>
+                        <li>Performed manual QA and cross-browser validation.</li>
+                        <li>Ensured pixel-perfect implementation before deployment.</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <!-- Impact Delivered Section -->
+                <div class="modal-full-section highlight-bg">
+                    <h3><i class="fas fa-chart-line text-gradient-primary"></i> Impact Delivered</h3>
+                    <p>The optimized navigation provided a cleaner and more intuitive browsing experience while accurately reflecting the approved designs. The implementation improved usability, enhanced mobile interactions, ensured consistent navigation across devices, and established a reliable foundation for measuring user engagement through A/B testing.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Sliding Mini Cart Case Study -->
+    <div class="case-study-modal" id="case-study-modal-minicart">
+        <div class="modal-overlay"></div>
+        <div class="modal-container glass-card">
+            <button class="modal-close" aria-label="Close Case Study">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-tag">A/B Testing | E-Commerce / Health & Wellness</span>
+                <h2 class="modal-title">Sliding Mini Cart Redesign & Checkout</h2>
+                <p class="modal-subtitle">Interactive sliding cart development bypassing API limitations to boost checkout flow.</p>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <!-- Challenge Column -->
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-circle-exclamation text-gradient-primary"></i> Challenge</h3>
+                            <p>The existing notification-style mini cart had several technical limitations that made redesigning it impractical. It displayed only one product at a time, lacked quantity controls, and exposed limited product information, making it difficult to implement the new CRO-focused design while preserving existing functionality.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Solution Column -->
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-lightbulb text-gradient-teal"></i> Solution</h3>
+                            <p>Instead of heavily modifying the existing component, a completely new sliding mini cart was developed. Product data was fetched using the existing cart APIs and rendered inside the new interface, allowing multiple cart items, quantity management, product removal, dynamic pricing, and a modern checkout experience without disrupting the backend cart logic.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <!-- Our Approach Section -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-route text-gradient-primary"></i> Our Approach</h3>
+                    <p>After reviewing the existing cart architecture, we identified that extending the original mini cart would introduce unnecessary complexity due to its DOM structure and limited functionality. We collaborated with the client to confirm expected behavior, then built a reusable sliding cart component that consumed the existing cart API. The new component maintained synchronization with the backend while providing a significantly improved user experience through responsive interactions and optimized UI.</p>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <!-- Key Features Section -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-square-check text-gradient-teal"></i> Key Features & Implementation</h3>
+                    <ul class="modal-features-list">
+                        <li>Built a custom sliding mini cart from scratch.</li>
+                        <li>Integrated existing cart APIs to fetch live cart data dynamically.</li>
+                        <li>Displayed multiple products simultaneously.</li>
+                        <li>Implemented quantity increase and decrease functionality.</li>
+                        <li>Added product removal capability directly in the drawer.</li>
+                        <li>Supported dynamic pricing including discounted products.</li>
+                        <li>Displayed sale and original prices side-by-side when applicable.</li>
+                        <li>Added a prominent Checkout Call to Action.</li>
+                        <li>Responsive layout optimized for desktop and mobile viewports.</li>
+                        <li>Smooth open and close cart drawer animations.</li>
+                        <li>Real-time cart updates without full page reloads.</li>
+                        <li>Performed comprehensive Manual QA and Cross-Browser Testing.</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <!-- Impact Delivered Section -->
+                <div class="modal-full-section highlight-bg">
+                    <h3><i class="fas fa-chart-line text-gradient-primary"></i> Impact Delivered</h3>
+                    <p>The redesigned sliding cart created a more intuitive shopping experience by giving customers complete visibility into their cart without interrupting their browsing journey. The implementation reduced interaction friction, simplified cart management, and provided a scalable frontend architecture suitable for future CRO experiments and feature enhancements.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5: Application Form Case Study -->
+    <div class="case-study-modal" id="case-study-modal-appform">
+        <div class="modal-overlay"></div>
+        <div class="modal-container glass-card">
+            <button class="modal-close" aria-label="Close Case Study">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-tag">A/B Testing | Education / Online Learning</span>
+                <h2 class="modal-title">Application Form Redesign & UX</h2>
+                <p class="modal-subtitle">Dual scroll and sticky banner implementation for online enrolment optimization.</p>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <!-- Challenge Column -->
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-circle-exclamation text-gradient-primary"></i> Challenge</h3>
+                            <p>The existing enrolment page contained a lengthy application form that created a less engaging user experience and reduced form completion efficiency. The redesign introduced a completely new layout with sticky elements, independent form scrolling, responsive improvements, and multiple mobile variations while maintaining compatibility with existing functionality such as file uploads and reCAPTCHA.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Solution Column -->
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-lightbulb text-gradient-teal"></i> Solution</h3>
+                            <p>Implemented a fully responsive application page based on approved Figma designs, introducing a sticky information banner, an independently scrollable application form, optimized mobile layouts, and improved spacing throughout the page. Several rounds of client feedback were incorporated to refine scrolling behavior, form positioning, typography, and overall usability before launch.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <!-- Our Approach Section -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-route text-gradient-primary"></i> Our Approach</h3>
+                    <p>We translated the approved Figma design into a responsive frontend implementation while preserving all existing application functionality. After the initial build, we worked closely with the client to refine the experience by resolving mobile zoom behavior, improving file upload accessibility, adjusting CTA placement, implementing custom scroll interactions, and supporting multiple design variants for mobile backgrounds.</p>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <!-- Key Features Section -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-square-check text-gradient-teal"></i> Key Features & Implementation</h3>
+                    <ul class="modal-features-list">
+                        <li>Built a complete responsive application page redesign.</li>
+                        <li>Implemented independent scrollable application form container.</li>
+                        <li>Added sticky promotional banner on desktop layouts.</li>
+                        <li>Optimized responsive layouts for desktop, tablet, and mobile.</li>
+                        <li>Developed multiple mobile design variants for client selection.</li>
+                        <li>Improved CTA positioning for higher visibility.</li>
+                        <li>Enhanced file upload section layout and styling.</li>
+                        <li>Prevented unwanted iOS input zoom behavior.</li>
+                        <li>Integrated existing form functionality and reCAPTCHA security.</li>
+                        <li>Implemented custom scroll behavior between page body and form.</li>
+                        <li>Pixel-perfect implementation from Figma specifications.</li>
+                        <li>Manual QA and Cross-Browser Testing validation.</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <!-- Impact Delivered Section -->
+                <div class="modal-full-section highlight-bg">
+                    <h3><i class="fas fa-chart-line text-gradient-primary"></i> Impact Delivered</h3>
+                    <p>The redesigned application experience provided a cleaner and more user-friendly enrolment journey while improving content organization and accessibility. The optimized layout, enhanced responsiveness, and refined scrolling interactions created a smoother application process, supporting future A/B testing initiatives focused on increasing form completion and conversion rates.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6: College Project Case Study -->
+    <div class="case-study-modal" id="case-study-modal-college">
+        <div class="modal-overlay"></div>
+        <div class="modal-container glass-card">
+            <button class="modal-close" aria-label="Close Case Study">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-tag">Academic Project | E-Commerce / Full Stack Development</span>
+                <h2 class="modal-title">E-Commerce Web Application (Mobile Shopee)</h2>
+                <p class="modal-subtitle">Full stack academic project developed using HTML, CSS, JS, PHP, and MySQL.</p>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <!-- Challenge Column -->
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-circle-exclamation text-gradient-primary"></i> Challenge</h3>
+                            <p>The objective was to create a functional e-commerce platform capable of handling dynamic product data, user authentication, and responsive layouts. The application needed to provide a smooth shopping experience while maintaining an organized backend for managing products and users.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Solution Column -->
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-lightbulb text-gradient-teal"></i> Solution</h3>
+                            <p>Developed a complete web application using PHP and MySQL for backend functionality and HTML, CSS, and JavaScript for the frontend. The system was designed to deliver a responsive user interface, secure user authentication, dynamic product management, and efficient database operations.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <!-- Our Approach Section -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-route text-gradient-primary"></i> Our Approach</h3>
+                    <p>The project was planned by dividing it into frontend, backend, and database modules. Responsive interfaces were first designed using HTML and CSS, followed by interactive features with JavaScript. PHP and MySQL were then integrated to handle user authentication, product management, and dynamic content rendering. Finally, the application was tested to ensure smooth navigation, responsive layouts, and reliable functionality across devices.</p>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <!-- Key Features Section -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-square-check text-gradient-teal"></i> Key Features & Implementation</h3>
+                    <ul class="modal-features-list">
+                        <li>Developed a fully responsive e-commerce website.</li>
+                        <li>Designed modern and user-friendly interfaces.</li>
+                        <li>Implemented user registration and login authentication.</li>
+                        <li>Built dynamic product listing pages.</li>
+                        <li>Integrated PHP with MySQL for database management.</li>
+                        <li>Developed admin product management functionality.</li>
+                        <li>Implemented responsive layouts for desktop and mobile.</li>
+                        <li>Added client-side form validation.</li>
+                        <li>Managed dynamic content rendering using PHP.</li>
+                        <li>Organized project using clean and maintainable code structure.</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <!-- Impact Delivered Section -->
+                <div class="modal-full-section highlight-bg">
+                    <h3><i class="fas fa-chart-line text-gradient-primary"></i> Impact Delivered</h3>
+                    <p>This project strengthened my understanding of full-stack web development by combining frontend technologies with backend programming and database management. It enhanced my practical experience in building dynamic web applications, implementing authentication systems, and developing responsive user interfaces.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fullscreen Image Modal -->
+    <div class="fullscreen-image-modal" id="fullscreen-image-modal">
+        <button class="modal-close" aria-label="Close Fullscreen">&times;</button>
+        <div class="fullscreen-content-wrapper">
+            <!-- Content will be injected here by JS -->
+        </div>
+    </div>
+
+    <!-- Global Javascript File -->
+    <script src="script.js"></script>
+</body>
+</html>
