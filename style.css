@@ -2121,6 +2121,9 @@ textarea.form-input {
     
     section {
         padding: 50px 1.25rem;
+    }
+
+    main > section:first-of-type {
         padding-top: 80px !important;
     }
     
@@ -2169,7 +2172,7 @@ textarea.form-input {
     
     .hero-section {
         height: auto;
-        min-height: 115vh !important;
+        min-height: 95vh !important;
     }
     
     .stats-grid {
@@ -2215,6 +2218,12 @@ textarea.form-input {
         flex-direction: column;
         text-align: center;
     }
+
+    main > section:first-of-type.hero-section + section + section {
+    padding-top: 0px !important;
+}
+
+
 }
 
 @media (max-width: 480px) {
@@ -2799,5 +2808,12 @@ textarea.form-input {
     animation: none;
 }
 
+@media only screen and (min-width: 768px){
+    .scroll-indicator {
+        bottom: 0rem !important;
+    } 
 
-
+    main > section:first-of-type.hero-section + section {
+    margin-top: 80px;
+}
+}
