@@ -591,14 +591,26 @@ document.addEventListener('DOMContentLoaded', () => {
 function initAutoScroll() {
     const containers = document.querySelectorAll('.vertical-scroll-container');
     
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.dataset.isVisible = 'true';
+            } else {
+                entry.target.dataset.isVisible = 'false';
+            }
+        });
+    }, { threshold: 0.1 });
+    
     containers.forEach(container => {
         let scrollSpeed = 0.5;
         let isHovered = false;
         let isTouching = false;
         let direction = 1;
         
+        scrollObserver.observe(container);
+        
         const scrollFrame = () => {
-            if (!isHovered && !isTouching) {
+            if (!isHovered && !isTouching && container.dataset.isVisible === 'true') {
                 container.scrollTop += (scrollSpeed * direction);
                 
                 // Reverse direction at bounds

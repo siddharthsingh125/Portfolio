@@ -2663,10 +2663,11 @@ textarea.form-input {
 .carousel-slide-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: top;
+    object-fit: contain;
+    object-position: center;
     display: block;
     max-width: none !important;
+    background: transparent;
 }
 
 /* Carousel Control Buttons */
@@ -2815,12 +2816,15 @@ textarea.form-input {
 }
 
 .fullscreen-content-wrapper .img-before,
-.fullscreen-content-wrapper .img-after {
+.fullscreen-content-wrapper .img-after,
+.fullscreen-content-wrapper img {
     height: auto;
-    object-fit: contain;
-}
-
-.fullscreen-content-wrapper .scroll-image {
+    max-height: calc(85vh - 60px) !important;
+    object-fit: contain !important;
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 0 auto;
+    display: block;
     position: relative;
     animation: none;
 }
