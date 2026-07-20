@@ -2848,3 +2848,16 @@ textarea.form-input {
     margin-top: 15px;
 }
 
+/* Desktop Hover Zoom for Popup Images */
+@media only screen and (min-width: 992px) {
+    .fullscreen-content-wrapper {
+        overflow: hidden !important;
+    }
+    .fullscreen-content-wrapper img {
+        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+        cursor: zoom-in;
+    }
+    .fullscreen-content-wrapper img:hover {
+        transform: scale(1.25) !important;
+    }
+}
