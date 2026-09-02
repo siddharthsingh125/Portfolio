@@ -83,14 +83,45 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Section Jump Navigation Pill Toggle
+    // Section Jump Navigation Pill Toggle & ScrollSpy
     const jumpPills = document.querySelectorAll('.section-jump-pill');
-    jumpPills.forEach(pill => {
-        pill.addEventListener('click', () => {
-            jumpPills.forEach(p => p.classList.remove('active'));
-            pill.classList.add('active');
+    if (jumpPills.length > 0) {
+        jumpPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                jumpPills.forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+            });
         });
-    });
+
+        // ScrollSpy to highlight the active section on scrolling
+        const croSection = document.getElementById('cro-section');
+        const frontendSection = document.getElementById('frontend-section');
+        
+        if (croSection && frontendSection) {
+            window.addEventListener('scroll', () => {
+                const scrollPos = window.scrollY + 250;
+                const frontendTop = frontendSection.offsetTop;
+                
+                if (scrollPos >= frontendTop) {
+                    jumpPills.forEach(pill => {
+                        if (pill.getAttribute('href') === '#frontend-section') {
+                            pill.classList.add('active');
+                        } else {
+                            pill.classList.remove('active');
+                        }
+                    });
+                } else {
+                    jumpPills.forEach(pill => {
+                        if (pill.getAttribute('href') === '#cro-section') {
+                            pill.classList.add('active');
+                        } else {
+                            pill.classList.remove('active');
+                        }
+                    });
+                }
+            }, { passive: true });
+        }
+    }
 
     // ==========================================================================
     // Typewriter Subtitle Animation (Framer Motion style delay loop)
@@ -98,8 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const subtitleEl = document.querySelector('.hero-subtitle-text');
     if (subtitleEl) {
         const words = [
+            "CRO & A/B Testing",
             "Frontend Developer",
-            "CRO & A/B Testing Specialist",
             "UI & Conversion Engineer"
         ];
         let wordIndex = 0;
