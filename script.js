@@ -83,6 +83,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Section Jump Navigation Pill Toggle
+    const jumpPills = document.querySelectorAll('.section-jump-pill');
+    jumpPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            jumpPills.forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
+        });
+    });
+
     // ==========================================================================
     // Typewriter Subtitle Animation (Framer Motion style delay loop)
     // ==========================================================================
@@ -91,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const words = [
             "Frontend Developer",
             "CRO & A/B Testing Specialist",
-            "QA & Optimization Engineer"
+            "UI & Conversion Engineer"
         ];
         let wordIndex = 0;
         let charIndex = 0;
@@ -586,7 +595,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ==========================================================================
-// Vertical Auto-Scroll Logic
+// Vertical Auto-Scroll Logic (Smooth sub-pixel scroll on Y-axis with pause)
 // ==========================================================================
 function initAutoScroll() {
     const containers = document.querySelectorAll('.vertical-scroll-container');
@@ -599,35 +608,64 @@ function initAutoScroll() {
                 entry.target.dataset.isVisible = 'false';
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.15 });
     
     containers.forEach(container => {
-        let scrollSpeed = 0.5;
+        let scrollSpeed = 0.7; // Smooth natural scrolling speed
         let isHovered = false;
         let isTouching = false;
-        let direction = 1;
+        let direction = 1; // 1 = down, -1 = up
+        let isPaused = false;
+        let currentScroll = container.scrollTop;
         
         scrollObserver.observe(container);
         
         const scrollFrame = () => {
-            if (!isHovered && !isTouching && container.dataset.isVisible === 'true') {
-                container.scrollTop += (scrollSpeed * direction);
-                
-                // Reverse direction at bounds
-                if (container.scrollTop <= 0) {
-                    direction = 1;
-                } else if (container.scrollTop + container.clientHeight >= container.scrollHeight - 1) {
-                    direction = -1;
+            if (!isHovered && !isTouching && !isPaused && container.dataset.isVisible === 'true') {
+                const maxScroll = container.scrollHeight - container.clientHeight;
+                if (maxScroll > 15) {
+                    currentScroll += (scrollSpeed * direction);
+                    
+                    if (currentScroll >= maxScroll) {
+                        currentScroll = maxScroll;
+                        container.scrollTop = currentScroll;
+                        direction = -1;
+                        isPaused = true;
+                        setTimeout(() => { isPaused = false; }, 1200);
+                    } else if (currentScroll <= 0) {
+                        currentScroll = 0;
+                        container.scrollTop = currentScroll;
+                        direction = 1;
+                        isPaused = true;
+                        setTimeout(() => { isPaused = false; }, 1200);
+                    } else {
+                        container.scrollTop = currentScroll;
+                    }
                 }
+            } else if (isHovered || isTouching) {
+                currentScroll = container.scrollTop;
             }
             requestAnimationFrame(scrollFrame);
         };
         
+        // Listen to scroll events to sync if user scrolls
+        container.addEventListener('scroll', () => {
+            if (isHovered || isTouching) {
+                currentScroll = container.scrollTop;
+            }
+        });
+        
         container.addEventListener('mouseenter', () => isHovered = true);
-        container.addEventListener('mouseleave', () => isHovered = false);
+        container.addEventListener('mouseleave', () => {
+            isHovered = false;
+            currentScroll = container.scrollTop;
+        });
         container.addEventListener('touchstart', () => isTouching = true, {passive: true});
         container.addEventListener('touchend', () => {
-            setTimeout(() => { isTouching = false; }, 1000);
+            setTimeout(() => { 
+                isTouching = false;
+                currentScroll = container.scrollTop;
+            }, 800);
         });
         
         requestAnimationFrame(scrollFrame);
@@ -654,12 +692,17 @@ function switchProjectImage(btn, type) {
     const imgBefore = scrollContainer.querySelector('.project-img-before');
     const imgAfter = scrollContainer.querySelector('.project-img-after');
     
-    if (type === 'before') {
+    if (type === 'before' || type === 'control') {
         if(imgBefore) imgBefore.style.display = 'block';
         if(imgAfter) imgAfter.style.display = 'none';
     } else {
         if(imgBefore) imgBefore.style.display = 'none';
         if(imgAfter) imgAfter.style.display = 'block';
     }
+    
+    // Reset scroll position to top
+    scrollContainer.scrollTop = 0;
 }
+
+
 
