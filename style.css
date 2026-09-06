@@ -663,8 +663,15 @@ section {
 .stat-title {
     font-size: 0.9rem;
     color: var(--text-secondary);
-    font-weight: 500;
+    font-weight: 600;
 }
+
+.stat-title span {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+
 
 /* ==========================================================================
    Section: About Me
@@ -3472,4 +3479,140 @@ textarea.form-input {
     }
 }
 
+/* ==========================================================================
+   Project Cards & Case Study Modal Developer Classes
+   ========================================================================== */
+.cro-projects-section {
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+}
 
+.jump-nav-container {
+    padding-top: 2rem;
+}
+
+.text-teal {
+    color: var(--accent-teal) !important;
+}
+
+.text-indigo {
+    color: var(--accent-indigo) !important;
+}
+
+.text-violet {
+    color: var(--accent-violet) !important;
+}
+
+.text-emerald {
+    color: var(--accent-emerald) !important;
+}
+
+.project-media-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll-flex {
+    flex: 1;
+}
+
+.project-meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.project-meta-tag {
+    color: var(--accent-teal);
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.project-meta-tag.tag-indigo {
+    color: var(--accent-indigo);
+}
+
+.project-meta-industry {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.project-desc {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.btn-case-study {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.85rem;
+    border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-case-study i {
+    margin-left: 0.5rem;
+}
+
+.role-pill-full {
+    grid-column: 1 / -1;
+}
+
+.role-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.35rem;
+}
+
+.tag-teal {
+    color: var(--accent-teal);
+}
+
+.tag-indigo {
+    color: var(--accent-indigo);
+}
+
+.modal-header-actions {
+    margin-top: 1.25rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.modal-cta-box {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(99, 102, 241, 0.06);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: var(--radius-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.modal-cta-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+}
+
+.modal-cta-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+#project-running-navigation,
+#project-sliding-cart,
+#project-mini-cart{
+    display: none;
+}
