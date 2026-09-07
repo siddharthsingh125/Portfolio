@@ -3649,3 +3649,17 @@ textarea.form-input {
 #project-mini-cart{
     display: none;
 }
+
+#project-cart-upsell .vertical-scroll-container,
+#project-mega-menu .vertical-scroll-container,
+#project-plp-tabs .vertical-scroll-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#project-cart-upsell .vertical-scroll-container img,
+#project-mega-menu .vertical-scroll-container img,
+#project-plp-tabs .vertical-scroll-container img {
+    height: fit-content;
+}
