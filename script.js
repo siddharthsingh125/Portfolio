@@ -87,9 +87,51 @@ document.addEventListener('DOMContentLoaded', () => {
     const jumpPills = document.querySelectorAll('.section-jump-pill');
     if (jumpPills.length > 0) {
         jumpPills.forEach(pill => {
-            pill.addEventListener('click', () => {
-                jumpPills.forEach(p => p.classList.remove('active'));
-                pill.classList.add('active');
+            pill.addEventListener('click', (e) => {
+                const targetId = pill.getAttribute('href');
+                if (targetId && targetId.startsWith('#')) {
+                    e.preventDefault();
+                    
+                    jumpPills.forEach(p => p.classList.remove('active'));
+                    pill.classList.add('active');
+                    
+                    let targetEl = null;
+                    if (targetId === '#cro-section') {
+                        // Scroll so that jump navigation pills and CRO section title are fully visible
+                        targetEl = document.querySelector('.jump-nav-container') || document.getElementById('cro-section');
+                    } else {
+                        targetEl = document.querySelector(targetId);
+                    }
+                    
+                    if (targetEl) {
+                        const isMobile = window.innerWidth <= 768;
+                        const header = document.querySelector('.header');
+                        const mobileMenu = document.querySelector('.mobile-menu');
+                        
+                        let totalNavHeight = 0;
+                        if (isMobile) {
+                            const headerH = header ? header.offsetHeight : 70;
+                            const menuH = (mobileMenu && window.getComputedStyle(mobileMenu).display !== 'none') ? mobileMenu.offsetHeight : 52;
+                            totalNavHeight = headerH + menuH;
+                        } else {
+                            totalNavHeight = header ? header.offsetHeight : 80;
+                        }
+                        
+                        // Generous breathing space so subtitles and titles never get cut off
+                        const extraSpacing = isMobile ? 25 : 30;
+                        const elementTop = targetEl.getBoundingClientRect().top + window.pageYOffset;
+                        const scrollDestination = Math.max(0, elementTop - totalNavHeight - extraSpacing);
+                        
+                        window.scrollTo({
+                            top: scrollDestination,
+                            behavior: 'smooth'
+                        });
+                        
+                        if (history.pushState) {
+                            history.pushState(null, null, targetId);
+                        }
+                    }
+                }
             });
         });
 
@@ -99,7 +141,12 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (croSection && frontendSection) {
             window.addEventListener('scroll', () => {
-                const scrollPos = window.scrollY + 250;
+                const isMobile = window.innerWidth <= 768;
+                const header = document.querySelector('.header');
+                const mobileMenu = document.querySelector('.mobile-menu');
+                const totalNav = isMobile ? ((header ? header.offsetHeight : 70) + (mobileMenu ? mobileMenu.offsetHeight : 52)) : (header ? header.offsetHeight : 80);
+                
+                const scrollPos = window.scrollY + totalNav + 100;
                 const frontendTop = frontendSection.offsetTop;
                 
                 if (scrollPos >= frontendTop) {
@@ -647,9 +694,19 @@ function initAutoScroll() {
         let isTouching = false;
         let direction = 1; // 1 = down, -1 = up
         let isPaused = false;
-        let currentScroll = container.scrollTop;
+        let currentScroll = 0;
+        container.scrollTop = 0;
         
         scrollObserver.observe(container);
+
+        // Listen for reset events (e.g. when user switches control/variant)
+        container.addEventListener('reset-scroll', () => {
+            currentScroll = 0;
+            direction = 1;
+            isPaused = true;
+            container.scrollTop = 0;
+            setTimeout(() => { isPaused = false; }, 1200);
+        });
         
         const scrollFrame = () => {
             if (!isHovered && !isTouching && !isPaused && container.dataset.isVisible === 'true') {
@@ -665,7 +722,7 @@ function initAutoScroll() {
                         setTimeout(() => { isPaused = false; }, 1200);
                     } else if (currentScroll <= 0) {
                         currentScroll = 0;
-                        container.scrollTop = currentScroll;
+                        container.scrollTop = 0;
                         direction = 1;
                         isPaused = true;
                         setTimeout(() => { isPaused = false; }, 1200);
@@ -684,7 +741,7 @@ function initAutoScroll() {
             if (isHovered || isTouching) {
                 currentScroll = container.scrollTop;
             }
-        });
+        }, { passive: true });
         
         container.addEventListener('mouseenter', () => isHovered = true);
         container.addEventListener('mouseleave', () => {
@@ -731,8 +788,9 @@ function switchProjectImage(btn, type) {
         if(imgAfter) imgAfter.style.display = 'block';
     }
     
-    // Reset scroll position to top
+    // Reset scroll position to top and notify auto-scroll
     scrollContainer.scrollTop = 0;
+    scrollContainer.dispatchEvent(new CustomEvent('reset-scroll'));
 }
 
 

@@ -51,7 +51,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-height) + 1.5rem);
+}
+
+@media (max-width: 768px) {
+    html {
+        scroll-padding-top: 145px;
+    }
 }
 
 body {
@@ -2601,9 +2611,7 @@ textarea.form-input {
     scroll-behavior: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
 }
 
 .vertical-scroll-container::-webkit-scrollbar {
@@ -2614,6 +2622,7 @@ textarea.form-input {
     width: 100%;
     height: auto;
     display: block;
+    vertical-align: top;
 }
 
 .project-image-switcher {
@@ -2877,8 +2886,10 @@ textarea.form-input {
    Section: Featured Development Project
    ========================================================================== */
 .featured-dev-section {
-    padding-top: 20px;
-    padding-bottom: 100px;
+    border-top: 1px solid var(--card-border);
+    padding-top: 4.5rem;
+    padding-bottom: 5rem;
+    scroll-margin-top: calc(var(--header-height) + 1.5rem);
 }
 
 .featured-dev-card {
@@ -3198,6 +3209,15 @@ textarea.form-input {
    Section: Dedicated CRO & A/B Testing Styles
    ========================================================================== */
 
+/* Scroll Margins for Section Jump Targets */
+#cro-section,
+#frontend-section,
+.cro-projects-section,
+.featured-dev-section,
+.jump-nav-container {
+    scroll-margin-top: calc(var(--header-height) + 1.5rem);
+}
+
 /* Section Jump Sub-Navigation */
 .section-jump-nav {
     display: flex;
@@ -3470,12 +3490,25 @@ textarea.form-input {
     
     .section-jump-nav {
         margin-bottom: 0rem;
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
     
     .section-jump-pill {
         font-size: 0.82rem;
         padding: 0.5rem 1rem;
+    }
+
+    #cro-section,
+    #frontend-section,
+    .cro-projects-section,
+    .featured-dev-section,
+    .jump-nav-container {
+        scroll-margin-top: 145px;
+    }
+
+    .featured-dev-section {
+        padding-top: 2.5rem !important;
+        padding-bottom: 3.5rem !important;
     }
 }
 
