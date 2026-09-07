@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Sachin Satwal's CRO & A/B testing experiment implementations, frontend optimizations, and web development projects.">
+    <title>Featured Projects & Case Studies | Sachin Satwal</title>
+    <!-- Fonts & CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="loader-overlay">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <div class="loader-logo">SACHIN<span>.SATWAL</span></div>
+        </div>
+    </div>
+
+    <!-- Background Ambient Glow & Grid -->
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <div class="background-grid"></div>
+
+    <!-- Main Navigation Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">SACHIN<span>SATWAL</span></a>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="experience.html" class="nav-link">Experience</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <a href="https://wa.me/918534972633" target="_blank" class="nav-cta"><i class="fab fa-whatsapp"></i> +91 8534972633 Let's Talk</a>
+
+            <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Let's Talk</a>
+    </div>
+
+    <main style="padding-top: var(--header-height);">
+        
+        <!-- Category Jump Navigation -->
+        <div class="container jump-nav-container">
+            <div class="section-jump-nav reveal">
+                <a href="#cro-section" class="section-jump-pill active active-teal">
+                    <i class="fas fa-flask"></i> CRO & A/B Testing Projects
+                </a>
+                <a href="#frontend-section" class="section-jump-pill">
+                    <i class="fas fa-code"></i> Frontend Development Projects
+                </a>
+            </div>
+        </div>
+
+        <!-- CRO & A/B Testing Projects Section -->
+        <section id="cro-section" class="cro-projects-section">
+            <div class="container">
+                <div class="reveal">
+                    <span class="section-subtitle text-teal">CRO & A/B Testing Projects</span>
+                    <h1 class="section-title">CRO & A/B Testing Projects</h1>
+                    <p class="section-description">My frontend work across A/B testing and CRO projects.</p>
+                </div>
+
+                <div class="projects-grid reveal">
+                    
+                    <!-- Project 1: Cart Page Upsell Module Optimization -->
+                    <article class="glass-card project-card" id="project-cart-upsell">
+                        <div class="project-media project-media-col">
+                            <div class="project-image-switcher">
+                                <button class="switcher-btn active" onclick="switchProjectImage(this, 'control')">Control</button>
+                                <button class="switcher-btn" onclick="switchProjectImage(this, 'variant')">Variant</button>
+                            </div>
+                            <div class="vertical-scroll-container scroll-flex">
+                                <img src="assets/Nominal control image.png" alt="Control - Cart Page Before Upsell" class="scroll-image project-img-before">
+                                <img src="assets/Nominal variation image.png" alt="Variant - Cart Page Upsell Module" class="scroll-image project-img-after" style="display: none;">
+                            </div>
+                            <button class="expand-image-btn" aria-label="View Full Image" onclick="openFullscreenVertical(this)"><i class="fas fa-expand"></i></button>
+                        </div>
+                        
+                        <div class="project-body">
+                            <div class="project-meta-row">
+                                <span class="project-meta-tag">A/B Testing</span>
+                                <span class="project-meta-industry">E-Commerce / Cart</span>
+                            </div>
+                            <h3 class="project-name">Cart Page Upsell Module Optimization</h3>
+                            
+                            <div class="project-highlight-box">
+                                Implemented a lightweight cart-page upsell module featuring optional accessories with one-click opt-in while preserving existing checkout functionality.
+                            </div>
+                            
+                            <!-- <p class="project-desc">
+                                Developed the cart upsell component according to experiment requirements, adding dynamic total calculations and validating responsive behavior across devices.
+                            </p> -->
+
+                            <!-- <div class="project-card-tags">
+                                <span class="tag-pill-sm highlight">A/B Test Development</span>
+                                <span class="tag-pill-sm highlight">Experiment Implementation</span>
+                                <span class="tag-pill-sm">Frontend Development</span>
+                                <span class="tag-pill-sm">QA Testing</span>
+                            </div> -->
+                            
+                            <div class="project-card-footer">
+                                <span class="project-tech-summary">HTML, CSS, JS, A/B Testing, QA</span>
+                                <button class="btn btn-primary btn-case-study" data-target="#modal-cart-upsell">
+                                    View Case Study <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Air Purifiers Product Page Redesign -->
+                    <article class="glass-card project-card" id="project-air-purifiers">
+                        <div class="project-media project-media-col">
+                            <div class="vertical-scroll-container scroll-flex">
+                                <img src="assets/Air purifier image.png" alt="Air Purifiers Product Page Variation" class="scroll-image">
+                            </div>
+                            <button class="expand-image-btn" aria-label="View Full Image" onclick="openFullscreenVertical(this)"><i class="fas fa-expand"></i></button>
+                        </div>
+                        
+                        <div class="project-body">
+                            <div class="project-meta-row">
+                                <span class="project-meta-tag">A/B Testing</span>
+                                <span class="project-meta-industry">E-Commerce / Product Page</span>
+                            </div>
+                            <h3 class="project-name">Air Purifiers Product Page Redesign</h3>
+                            
+                            <div class="project-highlight-box">
+                                Implemented multiple responsive UI variations based on approved Figma designs, refining product presentation, pricing logic, and CTA visibility.
+                            </div>
+                            
+                            <!-- <p class="project-desc">
+                                Developed responsive product page layouts, dynamic pricing display based on sale status, Affirm financing messaging, and comparison table enhancements.
+                            </p>
+
+                            <div class="project-card-tags">
+                                <span class="tag-pill-sm highlight">A/B Test Development</span>
+                                <span class="tag-pill-sm highlight">Experiment Implementation</span>
+                                <span class="tag-pill-sm">Frontend Development</span>
+                                <span class="tag-pill-sm">QA Testing</span>
+                            </div> -->
+                            
+                            <div class="project-card-footer">
+                                <span class="project-tech-summary">HTML, CSS, JS, Figma to Code, QA</span>
+                                <button class="btn btn-primary btn-case-study" data-target="#modal-air-purifiers">
+                                    View Case Study <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Navigation Mega Menu Optimization -->
+                    <article class="glass-card project-card" id="project-mega-menu">
+                        <div class="project-media project-media-col">
+                            <div class="project-image-switcher">
+                                <button class="switcher-btn active" onclick="switchProjectImage(this, 'control')">Control</button>
+                                <button class="switcher-btn" onclick="switchProjectImage(this, 'variant')">Variant</button>
+                            </div>
+                            <div class="vertical-scroll-container scroll-flex">
+                                <img src="assets/monal university control image.png" alt="Control - Navigation Menu" class="scroll-image project-img-before">
+                                <img src="assets/monash university version image.png" alt="Variant - Mega Menu Optimization" class="scroll-image project-img-after" style="display: none;">
+                            </div>
+                            <button class="expand-image-btn" aria-label="View Full Image" onclick="openFullscreenVertical(this)"><i class="fas fa-expand"></i></button>
+                        </div>
+                        
+                        <div class="project-body">
+                            <div class="project-meta-row">
+                                <span class="project-meta-tag">A/B Testing</span>
+                                <span class="project-meta-industry">Education / Navigation</span>
+                            </div>
+                            <h3 class="project-name">Navigation Mega Menu Optimization</h3>
+                            
+                            <div class="project-highlight-box">
+                                Implemented and refined three responsive mega menu variations across desktop and mobile to improve navigation clarity and course discoverability.
+                            </div>
+                            
+                            <!-- <p class="project-desc">
+                                Developed responsive navigation variations from Figma designs, resolved mobile drawer scrolling issues, and corrected dropdown interactions through QA validation.
+                            </p>
+
+                            <div class="project-card-tags">
+                                <span class="tag-pill-sm highlight">A/B Test Development</span>
+                                <span class="tag-pill-sm highlight">Experiment Implementation</span>
+                                <span class="tag-pill-sm">Frontend Development</span>
+                                <span class="tag-pill-sm">QA Testing</span>
+                            </div> -->
+                            
+                            <div class="project-card-footer">
+                                <span class="project-tech-summary">HTML, CSS, JS, Responsive Nav, QA</span>
+                                <button class="btn btn-primary btn-case-study" data-target="#modal-mega-menu">
+                                    View Case Study <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Homepage Conversion Optimization -->
+                    <article class="glass-card project-card" id="project-homepage-conversion">
+                        <div class="project-media project-media-col">
+                            <div class="project-image-switcher">
+                                <button class="switcher-btn active" onclick="switchProjectImage(this, 'control')">Control</button>
+                                <button class="switcher-btn" onclick="switchProjectImage(this, 'variant')">Variant</button>
+                            </div>
+                            <div class="vertical-scroll-container scroll-flex">
+                                <img src="assets/Rigid-Hitch-control.png" alt="Control - Rigid Hitch Homepage" class="scroll-image project-img-before">
+                                <img src="assets/Rigid-Hitch-varient.png" alt="Variant - Rigid Hitch Homepage" class="scroll-image project-img-after" style="display: none;">
+                            </div>
+                            <button class="expand-image-btn" aria-label="View Full Image" onclick="openFullscreenVertical(this)"><i class="fas fa-expand"></i></button>
+                        </div>
+                        
+                        <div class="project-body">
+                            <div class="project-meta-row">
+                                <span class="project-meta-tag">A/B Testing</span>
+                                <span class="project-meta-industry">Automotive / Homepage</span>
+                            </div>
+                            <h3 class="project-name">Homepage Conversion Optimization</h3>
+                            
+                            <div class="project-highlight-box">
+                                Implemented the redesigned homepage variation with greater prominence for vehicle fitment search, product categories, support CTAs, and trust messaging.
+                            </div>
+                            
+                            <!-- <p class="project-desc">
+                                Engineered modular frontend card architecture and connected fitment dropdown selectors without page reloads, ensuring responsive fidelity across devices.
+                            </p>
+
+                            <div class="project-card-tags">
+                                <span class="tag-pill-sm highlight">A/B Test Development</span>
+                                <span class="tag-pill-sm highlight">Experiment Implementation</span>
+                                <span class="tag-pill-sm">Frontend Development</span>
+                                <span class="tag-pill-sm">QA Testing</span>
+                            </div> -->
+                            
+                            <div class="project-card-footer">
+                                <span class="project-tech-summary">HTML, CSS, JS, E-Commerce, QA</span>
+                                <button class="btn btn-primary btn-case-study" data-target="#modal-homepage-conversion">
+                                    View Case Study <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: Running in Main Navigation — Retest -->
+                    <article class="glass-card project-card" id="project-running-navigation">
+                        <div class="project-media project-media-col">
+                            <div class="project-image-switcher">
+                                <button class="switcher-btn active" onclick="switchProjectImage(this, 'control')">Control</button>
+                                <button class="switcher-btn" onclick="switchProjectImage(this, 'variant')">Variant</button>
+                            </div>
+                            <div class="vertical-scroll-container scroll-flex">
+                                <img src="assets/Main Navigation_control.jfif" alt="Control - Main Navigation" class="scroll-image project-img-before">
+                                <img src="assets/Main Navigation_varient.jfif" alt="Variant - Running in Main Nav" class="scroll-image project-img-after" style="display: none;">
+                            </div>
+                            <button class="expand-image-btn" aria-label="View Full Image" onclick="openFullscreenVertical(this)"><i class="fas fa-expand"></i></button>
+                        </div>
+                        
+                        <div class="project-body">
+                            <div class="project-meta-row">
+                                <span class="project-meta-tag">A/B Testing</span>
+                                <span class="project-meta-industry">Navigation | AU</span>
+                            </div>
+                            <h3 class="project-name">Running in Main Navigation — Retest</h3>
+                            
+                            <div class="project-highlight-box">
+                                Implemented the navigation retest using the updated design to evaluate whether adding "Running" directly to main navigation improves category discoverability.
+                            </div>
+                            
+                            <p class="project-desc">
+                                Added "Running" to top-level navigation and mobile drawer while preserving existing dropdown interactions, hover states, and AU viewport responsiveness.
+                            </p>
+
+                            <div class="project-card-tags">
+                                <span class="tag-pill-sm highlight">A/B Test Development</span>
+                                <span class="tag-pill-sm highlight">Experiment Implementation</span>
+                                <span class="tag-pill-sm">Frontend Development</span>
+                                <span class="tag-pill-sm">QA Testing</span>
+                            </div>
+                            
+                            <div class="project-card-footer">
+                                <span class="project-tech-summary">HTML, CSS, JS DOM, QA Testing</span>
+                                <button class="btn btn-primary btn-case-study" data-target="#modal-running-navigation">
+                                    View Case Study <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 6: Application Form Redesign & UX -->
+                    <article class="glass-card project-card" id="project-application-form">
+                        <div class="project-media project-media-col">
+                            <div class="project-image-switcher">
+                                <button class="switcher-btn active" onclick="switchProjectImage(this, 'control')">Control</button>
+                                <button class="switcher-btn" onclick="switchProjectImage(this, 'variant')">Variant</button>
+                            </div>
+                            <div class="vertical-scroll-container scroll-flex">
+                                <img src="assets/FEDERATION ONLINE IMAGE CONTROL.png" alt="Control - Application Form" class="scroll-image project-img-before">
+                                <img src="assets/FEDERATION ONLINE IMAGE VERSION.png" alt="Variant - Application Form Redesign" class="scroll-image project-img-after" style="display: none;">
+                            </div>
+                            <button class="expand-image-btn" aria-label="View Full Image" onclick="openFullscreenVertical(this)"><i class="fas fa-expand"></i></button>
+                        </div>
+                        
+                        <div class="project-body">
+                            <div class="project-meta-row">
+                                <span class="project-meta-tag tag-indigo">A/B Testing</span>
+                                <span class="project-meta-industry">Education / E-Learning</span>
+                            </div>
+                            <h3 class="project-name">Application Form Redesign & UX</h3>
+                            
+                            <div class="project-highlight-box">
+                                Implemented a responsive application page redesign featuring an independently scrollable form, sticky desktop banner, and custom mobile layouts.
+                            </div>
+                            
+                            <!-- <p class="project-desc">
+                                Preserved existing form functionality including file uploads and reCAPTCHA security, resolved iOS input zoom behavior, and conducted responsive QA validation.
+                            </p>
+
+                            <div class="project-card-tags">
+                                <span class="tag-pill-sm highlight">Experiment Implementation</span>
+                                <span class="tag-pill-sm">Frontend Development</span>
+                                <span class="tag-pill-sm">QA Testing</span>
+                                <span class="tag-pill-sm">Form UX</span>
+                            </div> -->
+                            
+                            <div class="project-card-footer">
+                                <span class="project-tech-summary">HTML, CSS, JS, Form UX, QA</span>
+                                <button class="btn btn-primary btn-case-study" data-target="#modal-application-form">
+                                    View Case Study <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 7: PLP Content to Tab Navigation -->
+                    <article class="glass-card project-card" id="project-plp-tabs">
+                        <div class="project-media project-media-col">
+                            <div class="vertical-scroll-container scroll-flex">
+                                <img src="assets/Dekra Page_varient.png" alt="PLP Tab Navigation Variant" class="scroll-image">
+                            </div>
+                            <button class="expand-image-btn" aria-label="View Full Image" onclick="openFullscreenVertical(this)"><i class="fas fa-expand"></i></button>
+                        </div>
+                        
+                        <div class="project-body">
+                            <div class="project-meta-row">
+                                <span class="project-meta-tag">A/B Testing</span>
+                                <span class="project-meta-industry">Automotive / PLP</span>
+                            </div>
+                            <h3 class="project-name">PLP Content to Tab Navigation</h3>
+                            
+                            <div class="project-highlight-box">
+                                Implemented a tabbed content variation reorganizing vertically stacked PLP supporting content into structured tabs while preserving all information.
+                            </div>
+                            
+                            <!-- <p class="project-desc">
+                                Engineered responsive tab behavior, semantic HTML and ARIA tabs, JavaScript switching logic, and mobile horizontal scrolling while preserving all content.
+                            </p>
+
+                            <div class="project-card-tags">
+                                <span class="tag-pill-sm highlight">A/B Test Development</span>
+                                <span class="tag-pill-sm highlight">Experiment Implementation</span>
+                                <span class="tag-pill-sm">Frontend Development</span>
+                                <span class="tag-pill-sm">QA Testing</span>
+                            </div> -->
+                            
+                            <div class="project-card-footer">
+                                <span class="project-tech-summary">HTML, CSS, JS Tabs, QA Testing</span>
+                                <button class="btn btn-primary btn-case-study" data-target="#modal-plp-tab-navigation">
+                                    View Case Study <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 8: Sliding Mini Cart Redesign & Checkout -->
+                    <article class="glass-card project-card" id="project-sliding-cart">
+                        <div class="project-media project-media-col">
+                            <div class="project-image-switcher">
+                                <button class="switcher-btn active" onclick="switchProjectImage(this, 'control')">Control</button>
+                                <button class="switcher-btn" onclick="switchProjectImage(this, 'variant')">Variant</button>
+                            </div>
+                            <div class="vertical-scroll-container scroll-flex">
+                                <img src="assets/Dr SEBI CELL FOOD CONTROL.png" alt="Control - Mini Cart" class="scroll-image project-img-before">
+                                <img src="assets/Dr SEBI CELL FOOD VERSION.png" alt="Variant - Sliding Mini Cart" class="scroll-image project-img-after" style="display: none;">
+                            </div>
+                            <button class="expand-image-btn" aria-label="View Full Image" onclick="openFullscreenVertical(this)"><i class="fas fa-expand"></i></button>
+                        </div>
+                        
+                        <div class="project-body">
+                            <div class="project-meta-row">
+                                <span class="project-meta-tag tag-indigo">Frontend / CRO Implementation</span>
+                                <span class="project-meta-industry">E-Commerce</span>
+                            </div>
+                            <h3 class="project-name">Sliding Mini Cart Redesign & Checkout</h3>
+                            
+                            <div class="project-highlight-box">
+                                Developed a new sliding mini cart that consumed existing cart APIs and dynamically rendered cart items while maintaining synchronization with backend logic.
+                            </div>
+                            
+                            <p class="project-desc">
+                                Supported multiple cart items, interactive quantity controls, product removals, dynamic pricing, sale prices, and a prominent checkout CTA.
+                            </p>
+
+                            <div class="project-card-tags">
+                                <span class="tag-pill-sm highlight">Frontend Development</span>
+                                <span class="tag-pill-sm highlight">Experiment Implementation</span>
+                                <span class="tag-pill-sm">API Integration</span>
+                                <span class="tag-pill-sm">QA Testing</span>
+                            </div>
+                            
+                            <div class="project-card-footer">
+                                <span class="project-tech-summary">HTML, CSS, JS, Cart API, QA</span>
+                                <button class="btn btn-primary btn-case-study" data-target="#modal-sliding-mini-cart">
+                                    View Case Study <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 9: Mini Cart UX & Conversion Optimization -->
+                    <article class="glass-card project-card" id="project-mini-cart">
+                        <div class="project-media project-media-col">
+                            <div class="vertical-scroll-container scroll-flex">
+                                <img src="assets/Benisouk-MiniCart.png" alt="Benisouk Mini Cart Optimization" class="scroll-image">
+                            </div>
+                            <button class="expand-image-btn" aria-label="View Full Image" onclick="openFullscreenVertical(this)"><i class="fas fa-expand"></i></button>
+                        </div>
+                        
+                        <div class="project-body">
+                            <div class="project-meta-row">
+                                <span class="project-meta-tag">CRO Implementation</span>
+                                <span class="project-meta-industry">E-Commerce / Cart</span>
+                            </div>
+                            <h3 class="project-name">Mini Cart UX & Conversion Optimization</h3>
+                            
+                            <div class="project-highlight-box">
+                                Implemented a cleaner mini cart experience focused on cart information, pricing visibility, responsive behavior, and clear checkout CTA placement.
+                            </div>
+                            
+                            <p class="project-desc">
+                                Simplified cart hierarchy, developed responsive layouts for mobile, tablet, and desktop, added slide-over interactions, and configured user interaction tracking.
+                            </p>
+
+                            <div class="project-card-tags">
+                                <span class="tag-pill-sm highlight">Frontend Development</span>
+                                <span class="tag-pill-sm highlight">Experiment Implementation</span>
+                                <span class="tag-pill-sm">QA Testing</span>
+                                <span class="tag-pill-sm">Cart UX</span>
+                            </div>
+                            
+                            <div class="project-card-footer">
+                                <span class="project-tech-summary">HTML, CSS, JS, Event Tracking, QA</span>
+                                <button class="btn btn-primary btn-case-study" data-target="#modal-mini-cart-optimization">
+                                    View Case Study <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Frontend Development Projects Section -->
+        <section id="frontend-section" class="featured-dev-section" style="border-top: 1px solid var(--card-border); padding-top: 5rem; padding-bottom: 5rem;">
+            <div class="container">
+                <div class="reveal">
+                    <span class="section-subtitle">Full-Stack Development</span>
+                    <h2 class="section-title">Full-Stack Development Projects</h2>
+                    <!-- <p class="section-description">A curated selection of standalone web applications and full-stack development projects built with clean code, responsive layouts, and modern web standards.</p> -->
+                </div>
+
+                <!-- Featured Project: Mobile Shopee -->
+                <div class="featured-dev-card glass-card reveal">
+                    <div class="featured-dev-layout">
+                        <!-- Left: Project Preview Showcase Carousel -->
+                        <div class="featured-dev-media">
+                            <span class="media-live-badge">
+                                <span class="live-status-indicator"></span> Live Demo
+                            </span>
+                            <div class="carousel-slider featured-carousel">
+                                <div class="carousel-slides">
+                                    <div class="carousel-slide-item">
+                                        <img src="assets/COLLEGE PROJECT1.png" alt="Mobile Shopee Home Screen">
+                                    </div>
+                                    <div class="carousel-slide-item">
+                                        <img src="assets/COLLEGE PROJECT2.png" alt="Mobile Shopee Product Grid">
+                                    </div>
+                                    <div class="carousel-slide-item">
+                                        <img src="assets/COLLEGE PROJECT3.png" alt="Mobile Shopee Cart View">
+                                    </div>
+                                    <div class="carousel-slide-item">
+                                        <img src="assets/COLLEGE PROJECT4.png" alt="Mobile Shopee Checkout">
+                                    </div>
+                                    <div class="carousel-slide-item">
+                                        <img src="assets/COLLEGE PROJECT5.png" alt="Mobile Shopee Product Detail">
+                                    </div>
+                                </div>
+                                
+                                <!-- Navigation Controls -->
+                                <button class="carousel-btn prev-btn" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+                                <button class="carousel-btn next-btn" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+                                
+                                <!-- Dot Indicators -->
+                                <div class="carousel-dots">
+                                    <span class="carousel-dot active" data-slide="0"></span>
+                                    <span class="carousel-dot" data-slide="1"></span>
+                                    <span class="carousel-dot" data-slide="2"></span>
+                                    <span class="carousel-dot" data-slide="3"></span>
+                                    <span class="carousel-dot" data-slide="4"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Project Details -->
+                        <div class="featured-dev-content">
+                            <div class="featured-dev-meta">
+                                <span class="featured-dev-badge"><i class="fas fa-star" style="color: #f59e0b;"></i> FEATURED PROJECT</span>
+                                <span class="featured-dev-type">Full-Stack E-commerce Web Application</span>
+                            </div>
+
+                            <h3 class="featured-dev-title">Mobile Shopee — E-commerce Website</h3>
+
+                            <p class="featured-dev-desc">
+                                Mobile Shopee is a responsive full-stack e-commerce web application developed using HTML5, CSS3, JavaScript, Bootstrap, PHP, and MySQL. The application features dynamic product catalog management, item detail pages, shopping cart, wishlist, blog system, and an admin panel for inventory and content operations.
+                            </p>
+
+                            <!-- Tech Stack Pills -->
+                            <div class="featured-dev-tech-group">
+                                <span class="tech-pill"><i class="fab fa-html5" style="color: #e34f26;"></i> HTML5</span>
+                                <span class="tech-pill"><i class="fab fa-css3-alt" style="color: #1572b6;"></i> CSS3</span>
+                                <span class="tech-pill"><i class="fab fa-js" style="color: #f7df1e;"></i> JavaScript</span>
+                                <span class="tech-pill"><i class="fab fa-bootstrap" style="color: #7952b3;"></i> Bootstrap</span>
+                                <span class="tech-pill"><i class="fab fa-php" style="color: #777bb4;"></i> PHP</span>
+                                <span class="tech-pill"><i class="fas fa-database" style="color: #4479a1;"></i> MySQL</span>
+                            </div>
+
+                            <!-- Key Features -->
+                            <div class="featured-dev-features">
+                                <h4 class="features-heading"><i class="fas fa-layer-group text-gradient-teal"></i> Key Features</h4>
+                                <ul class="features-grid-list">
+                                    <li><i class="fas fa-circle-check"></i> Responsive e-commerce user interface</li>
+                                    <li><i class="fas fa-circle-check"></i> Dynamic product catalog and details view</li>
+                                    <li><i class="fas fa-circle-check"></i> Shopping cart and wishlist workflow</li>
+                                    <li><i class="fas fa-circle-check"></i> PHP and MySQL database backend integration</li>
+                                    <li><i class="fas fa-circle-check"></i> Admin dashboard and product management</li>
+                                    <li><i class="fas fa-circle-check"></i> Interactive blog management system</li>
+                                    <li><i class="fas fa-circle-check"></i> Complete CRUD database operations</li>
+                                    <li><i class="fas fa-circle-check"></i> Seamless cross-device mobile responsiveness</li>
+                                </ul>
+                            </div>
+
+                            <!-- Action CTAs -->
+                            <div class="featured-dev-actions">
+                                <a href="https://mobileshopee-ecommerce.freedev.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-live-site">
+                                    <span class="live-status-indicator"></span>
+                                    <i class="fas fa-globe"></i>
+                                    <span>Live Website</span>
+                                    <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.8rem; margin-left: 0.2rem;"></i>
+                                </a>
+                                <button class="btn btn-secondary btn-case-study" data-target="#modal-mobile-shopee">
+                                    <i class="fas fa-file-lines" style="margin-right: 0.4rem;"></i>
+                                    <span>Technical Case Study</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand-col">
+                <a href="index.html" class="footer-brand-logo">SACHIN<span>SATWAL</span></a>
+                <p class="footer-brand-desc">
+                    Frontend Developer | CRO & A/B Testing Specialist<br> 
+                    Building high-performing digital experiences.
+                </p>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4 class="footer-col-title">Navigation</h4>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="experience.html" class="footer-link">Experience</a>
+                    <a href="projects.html" class="footer-link">Projects</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+            </div>
+
+            <div class="footer-links-col">
+                <h4 class="footer-col-title">Reach Out</h4>
+                <div class="footer-contact-info">
+                    <p><i class="fas fa-envelope text-indigo" style="margin-right: 0.5rem;"></i>sidharthsingh6298@gmail.com</p>
+                    <p><i class="fas fa-phone text-indigo" style="margin-right: 0.5rem;"></i> +91 8534972633</p>
+                    <p><i class="fas fa-location-dot text-indigo" style="margin-right: 0.5rem;"></i> Almora, Uttarakhand, India</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2026 Sachin Satwal. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/siddharthsingh125/" target="_blank" rel="noopener noreferrer" class="social-icon" style="width: 38px; height: 38px; font-size: 1rem;"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" style="width: 38px; height: 38px; font-size: 1rem;"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Case Study Modals -->
+
+    <!-- Modal 1: Cart Page Upsell Module Optimization -->
+    <div class="case-study-modal" id="modal-cart-upsell">
+        <div class="modal-overlay"></div>
+        <div class="modal-container glass-card">
+            <button class="modal-close" aria-label="Close Case Study">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-tag tag-teal">A/B Testing | E-Commerce / Cart</span>
+                <h2 class="modal-title">Cart Page Upsell Module Optimization</h2>
+                <p class="modal-subtitle">Tested the addition of relevant accessories within the cart to increase upsell opportunities while keeping the existing cart and checkout experience unchanged.</p>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Experiment Metadata Area -->
+                <div class="experiment-meta-grid">
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Test Type</span>
+                        <span class="meta-pill-value"><i class="fas fa-vial text-teal"></i> Cart A/B Test</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Market / Platform</span>
+                        <span class="meta-pill-value"><i class="fas fa-cart-shopping text-indigo"></i> E-Commerce / Cart</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Devices</span>
+                        <span class="meta-pill-value"><i class="fas fa-mobile-screen-button text-violet"></i> Desktop, Tablet & Mobile</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Primary Goal</span>
+                        <span class="meta-pill-value"><i class="fas fa-bullseye text-emerald"></i> Upsell Interaction</span>
+                    </div>
+                    <div class="meta-pill-item role-pill-full">
+                        <span class="meta-pill-label">Your Role</span>
+                        <div class="role-tags">
+                            <span class="tag-pill-sm highlight"><i class="fas fa-code"></i> A/B Test Development</span>
+                            <span class="tag-pill-sm highlight"><i class="fas fa-flask"></i> Experiment Implementation</span>
+                            <span class="tag-pill-sm"><i class="fas fa-laptop-code"></i> Frontend Development</span>
+                            <span class="tag-pill-sm"><i class="fas fa-check-double"></i> QA Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenge & Implementation -->
+                <div class="modal-grid">
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-circle-exclamation text-gradient-primary"></i> Challenge</h3>
+                            <p>The existing cart page did not provide users with an option to purchase relevant complementary products. The challenge was to introduce an upsell opportunity within the existing cart without creating friction or affecting the normal checkout flow.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-laptop-code text-gradient-teal"></i> Implementation</h3>
+                            <p>Implemented a cart-page upsell module featuring two optional accessories — Chain Extender and Gift Box. Users could add an accessory directly from the cart, with the cart updating dynamically while maintaining the existing cart and checkout functionality.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-divider"></div>
+
+                <!-- Key Changes -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-sliders text-gradient-primary"></i> Key Changes</h3>
+                    <ul class="modal-features-list">
+                        <li>Built the cart upsell module based on the experiment requirements.</p>
+                        <li>Added one-click Add to Cart for optional accessories.</p>
+                        <li>Implemented dynamic cart total updates after an upsell is added.</p>
+                        <li>Integrated the module responsively across desktop, tablet, and mobile.</p>
+                        <li>Maintained consistency with the existing checkout UI.</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-divider"></div>
+
+                <!-- Experiment Goal -->
+                <div class="modal-full-section highlight-bg">
+                    <h3><i class="fas fa-bullseye text-gradient-primary"></i> Experiment Goal</h3>
+                    <p>Evaluate whether introducing relevant optional accessories within the cart increases upsell interaction and order value without negatively affecting the existing checkout experience.</p>
+                </div>
+
+                <div class="modal-divider"></div>
+
+                <!-- Potential KPIs -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-chart-simple text-gradient-teal"></i> Potential KPIs</h3>
+                    <div class="cro-metrics-grid">
+                        <span class="cro-metric-badge primary-goal"><i class="fas fa-star"></i> Upsell Interaction Rate</span>
+                        <span class="cro-metric-badge"><i class="fas fa-cart-plus"></i> Upsell Add-to-Cart Rate</span>
+                        <span class="cro-metric-badge"><i class="fas fa-receipt"></i> Average Order Value</span>
+                        <span class="cro-metric-badge"><i class="fas fa-arrow-trend-up"></i> Purchase Conversion Rate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Air Purifiers Product Page Redesign -->
+    <div class="case-study-modal" id="modal-air-purifiers">
+        <div class="modal-overlay"></div>
+        <div class="modal-container glass-card">
+            <button class="modal-close" aria-label="Close Case Study">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-tag tag-teal">A/B Testing | E-Commerce / Product Page</span>
+                <h2 class="modal-title">Air Purifiers Product Page Redesign</h2>
+                <p class="modal-subtitle">Redesigned the product page experience to improve product presentation, pricing visibility, comparison, and the overall path from product evaluation to purchase.</p>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Experiment Metadata Area -->
+                <div class="experiment-meta-grid">
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Test Type</span>
+                        <span class="meta-pill-value"><i class="fas fa-vial text-teal"></i> Product Page A/B Test</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Market / Platform</span>
+                        <span class="meta-pill-value"><i class="fas fa-store text-indigo"></i> E-Commerce / Product Page</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Devices</span>
+                        <span class="meta-pill-value"><i class="fas fa-desktop text-violet"></i> Desktop & Mobile</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Primary Goal</span>
+                        <span class="meta-pill-value"><i class="fas fa-bullseye text-emerald"></i> Engagement & Progression</span>
+                    </div>
+                    <div class="meta-pill-item role-pill-full">
+                        <span class="meta-pill-label">Your Role</span>
+                        <div class="role-tags">
+                            <span class="tag-pill-sm highlight"><i class="fas fa-code"></i> A/B Test Development</span>
+                            <span class="tag-pill-sm highlight"><i class="fas fa-flask"></i> Experiment Implementation</span>
+                            <span class="tag-pill-sm"><i class="fas fa-laptop-code"></i> Frontend Development</span>
+                            <span class="tag-pill-sm"><i class="fas fa-check-double"></i> QA Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenge & Implementation -->
+                <div class="modal-grid">
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-circle-exclamation text-gradient-primary"></i> Challenge</h3>
+                            <p>The existing product page had opportunities to improve how product information, pricing, financing options, comparison features, and purchase CTAs were presented. The experience also needed to work consistently across desktop and mobile while following the approved designs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-laptop-code text-gradient-teal"></i> Implementation</h3>
+                            <p>Implemented the redesigned product page variations based on the approved Figma designs and client feedback. Updated product information, pricing logic, financing messaging, product imagery, comparison sections, and Add to Cart interactions while maintaining responsive behavior across desktop and mobile.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-divider"></div>
+
+                <!-- Key Changes -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-sliders text-gradient-primary"></i> Key Changes</h3>
+                    <ul class="modal-features-list">
+                        <li>Built multiple desktop and mobile product page variations.</li>
+                        <li>Redesigned product information and pricing presentation.</li>
+                        <li>Implemented dynamic pricing based on sale status.</li>
+                        <li>Improved product image and information visibility</li>
+                        <li>Updated the comparison table with Add to Cart actions.</li>
+                        <li>Improved visibility and placement of the primary Add to Cart CTA.</li>
+                        <li>Implemented responsive product imagery and banners.</li>
+                        <li>Fixed responsive rendering issues across screen sizes.</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-divider"></div>
+
+                <!-- Experiment Goal -->
+                <div class="modal-full-section highlight-bg">
+                    <h3><i class="fas fa-bullseye text-gradient-primary"></i> Experiment Goal</h3>
+                    <p>Evaluate whether the redesigned product page improves product engagement, information visibility, and progression toward purchase across desktop and mobile.</p>
+                </div>
+
+                <div class="modal-divider"></div>
+
+                <!-- Potential KPIs -->
+                <!-- <div class="modal-full-section">
+                    <h3><i class="fas fa-chart-simple text-gradient-teal"></i> Potential KPIs</h3>
+                    <div class="cro-metrics-grid">
+                        <span class="cro-metric-badge primary-goal"><i class="fas fa-star"></i> Product Engagement</span>
+                        <span class="cro-metric-badge"><i class="fas fa-eye"></i> Product Views</span>
+                        <span class="cro-metric-badge"><i class="fas fa-cart-plus"></i> Add-to-Cart Rate</span>
+                        <span class="cro-metric-badge"><i class="fas fa-arrow-pointer"></i> CTA Interaction</span>
+                        <span class="cro-metric-badge"><i class="fas fa-arrow-trend-up"></i> Purchase Conversion Rate</span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Navigation Mega Menu Optimization -->
+    <div class="case-study-modal" id="modal-mega-menu">
+        <div class="modal-overlay"></div>
+        <div class="modal-container glass-card">
+            <button class="modal-close" aria-label="Close Case Study">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-tag tag-teal">A/B Testing | Education / Navigation</span>
+                <h2 class="modal-title">Navigation Mega Menu Optimization</h2>
+                <p class="modal-subtitle">Tested different mega menu layouts across desktop and mobile to improve navigation clarity, course discoverability, and user interaction.</p>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Experiment Metadata Area -->
+                <div class="experiment-meta-grid">
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Test Type</span>
+                        <span class="meta-pill-value"><i class="fas fa-vial text-teal"></i> Navigation A/B Test</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Market / Platform</span>
+                        <span class="meta-pill-value"><i class="fas fa-graduation-cap text-indigo"></i> Education / Navigation</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Devices</span>
+                        <span class="meta-pill-value"><i class="fas fa-desktop text-violet"></i> Desktop & Mobile</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Primary Goal</span>
+                        <span class="meta-pill-value"><i class="fas fa-compass text-emerald"></i> Course Discoverability</span>
+                    </div>
+                    <div class="meta-pill-item role-pill-full">
+                        <span class="meta-pill-label">Your Role</span>
+                        <div class="role-tags">
+                            <span class="tag-pill-sm highlight"><i class="fas fa-code"></i> A/B Test Development</span>
+                            <span class="tag-pill-sm highlight"><i class="fas fa-flask"></i> Experiment Implementation</span>
+                            <span class="tag-pill-sm"><i class="fas fa-laptop-code"></i> Frontend Development</span>
+                            <span class="tag-pill-sm"><i class="fas fa-check-double"></i> QA Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenge & Implementation -->
+                <div class="modal-grid">
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-circle-exclamation text-gradient-primary"></i> Challenge</h3>
+                            <p>The client wanted to test different mega menu variations to make navigation clearer and help users find relevant courses and categories more easily across desktop and mobile.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-laptop-code text-gradient-teal"></i> Implementation</h3>
+                            <p>Implemented three navigation variations based on the approved Figma designs, including two desktop variations and one mobile variation. Made iterative UI and functionality updates based on client feedback and QA findings.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-divider"></div>
+
+                <!-- Key Changes -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-sliders text-gradient-primary"></i> Key Changes</h3>
+                    <ul class="modal-features-list">
+                        <li>Developed responsive mega menu variations for desktop and mobile.</li>
+                        <li>Implemented approved Figma designs.</li>
+                        <li>Fixed navigation labels and duplicate text.</li>
+                        <li>Improved dropdown interactions.</li>
+                        <li>Corrected arrow alignment and clickable target areas.</li>
+                        <li>Resolved mobile scrolling issues inside the navigation drawer.</li>
+                        <li>Improved responsive behavior across screen sizes.</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-divider"></div>
+
+                <!-- Experiment Goal -->
+                <div class="modal-full-section highlight-bg">
+                    <h3><i class="fas fa-bullseye text-gradient-primary"></i> Experiment Goal</h3>
+                    <p>Evaluate different navigation structures to determine their impact on course discoverability, navigation interaction, and overall user experience.</p>
+                </div>
+
+                <div class="modal-divider"></div>
+
+                <!-- Potential KPIs -->
+                <!-- <div class="modal-full-section">
+                    <h3><i class="fas fa-chart-simple text-gradient-teal"></i> Potential KPIs</h3>
+                    <div class="cro-metrics-grid">
+                        <span class="cro-metric-badge primary-goal"><i class="fas fa-star"></i> Navigation Interaction Rate</span>
+                        <span class="cro-metric-badge"><i class="fas fa-bars"></i> Menu Engagement</span>
+                        <span class="cro-metric-badge"><i class="fas fa-hand-pointer"></i> Category Clicks</span>
+                        <span class="cro-metric-badge"><i class="fas fa-book-open"></i> Course Page Visits</span>
+                        <span class="cro-metric-badge"><i class="fas fa-percent"></i> Navigation CTR</span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Homepage Conversion Optimization -->
+    <div class="case-study-modal" id="modal-homepage-conversion">
+        <div class="modal-overlay"></div>
+        <div class="modal-container glass-card">
+            <button class="modal-close" aria-label="Close Case Study">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-tag tag-teal">A/B Testing | Automotive / Homepage</span>
+                <h2 class="modal-title">Homepage Conversion Optimization</h2>
+                <p class="modal-subtitle">Redesigned the homepage to improve vehicle fitment access, product discovery, category navigation, and progression toward purchase.</p>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Experiment Metadata Area -->
+                <div class="experiment-meta-grid">
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Test Type</span>
+                        <span class="meta-pill-value"><i class="fas fa-vial text-teal"></i> Homepage A/B Test</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Market / Platform</span>
+                        <span class="meta-pill-value"><i class="fas fa-car text-indigo"></i> E-Commerce / Auto Parts</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Devices</span>
+                        <span class="meta-pill-value"><i class="fas fa-desktop text-violet"></i> Desktop & Mobile</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Primary Goal</span>
+                        <span class="meta-pill-value"><i class="fas fa-cart-shopping text-emerald"></i> Transactions / Purchases</span>
+                    </div>
+                    <div class="meta-pill-item role-pill-full">
+                        <span class="meta-pill-label">Your Role</span>
+                        <div class="role-tags">
+                            <span class="tag-pill-sm highlight"><i class="fas fa-code"></i> A/B Test Development</span>
+                            <span class="tag-pill-sm highlight"><i class="fas fa-flask"></i> Experiment Implementation</span>
+                            <span class="tag-pill-sm"><i class="fas fa-laptop-code"></i> Frontend Development</span>
+                            <span class="tag-pill-sm"><i class="fas fa-check-double"></i> QA Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenge & Implementation -->
+                <div class="modal-grid">
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-circle-exclamation text-gradient-primary"></i> Challenge</h3>
+                            <p>The existing homepage had opportunities to improve vehicle fitment access, category navigation, product discovery, and the overall path toward purchase.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-laptop-code text-gradient-teal"></i> Implementation</h3>
+                            <p>Implemented the redesigned homepage variation with a more prominent vehicle fitment selector, product category sections, support CTAs, and trust elements while maintaining responsive behavior across desktop and mobile.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-divider"></div>
+
+                <!-- Key Changes -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-sliders text-gradient-primary"></i> Key Changes</h3>
+                    <ul class="modal-features-list">
+                        <li>Positioned the Year / Make / Model selector prominently above the fold.</li>
+                        <li>Added visual category cards for core hitch types.</li>
+                        <li>Added B2B / Dealer contact banners.</li>
+                        <li>Added customer reassurance and shipping badges.</li>
+                        <li>Implemented modular frontend card architecture.</li>
+                        <li>Connected fitment selectors without unnecessary page reloads.</li>
+                        <li>Implemented responsive layouts across mobile to large desktop displays.</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-divider"></div>
+
+                <!-- Experiment Goal -->
+                <div class="modal-full-section highlight-bg">
+                    <h3><i class="fas fa-bullseye text-gradient-primary"></i> Experiment Goal</h3>
+                    <p>Evaluate whether the redesigned homepage improves fitment interaction, product discovery, and progression toward purchase, ultimately supporting higher transactions.</p>
+                </div>
+
+                <div class="modal-divider"></div>
+
+                <!-- Potential KPIs -->
+                <!-- <div class="modal-full-section">
+                    <h3><i class="fas fa-chart-simple text-gradient-teal"></i> Potential KPIs</h3>
+                    <div class="cro-metrics-grid">
+                        <span class="cro-metric-badge primary-goal"><i class="fas fa-cart-shopping"></i> Transactions</span>
+                        <span class="cro-metric-badge"><i class="fas fa-car-side"></i> Vehicle Fitment Interactions</span>
+                        <span class="cro-metric-badge"><i class="fas fa-circle-check"></i> Fitment Completion Rate</span>
+                        <span class="cro-metric-badge"><i class="fas fa-hand-pointer"></i> Category CTA Clicks</span>
+                        <span class="cro-metric-badge"><i class="fas fa-bolt"></i> Hero CTA Clicks</span>
+                        <span class="cro-metric-badge"><i class="fas fa-bag-shopping"></i> Add-to-Cart Rate</span>
+                        <span class="cro-metric-badge"><i class="fas fa-arrow-right-to-bracket"></i> Homepage-to-PDP Progression</span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5: Running in Main Navigation — Retest -->
+    <div class="case-study-modal" id="modal-running-navigation">
+        <div class="modal-overlay"></div>
+        <div class="modal-container glass-card">
+            <button class="modal-close" aria-label="Close Case Study">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-tag tag-teal">A/B Testing | Navigation | AU</span>
+                <h2 class="modal-title">Running in Main Navigation — Retest</h2>
+                <p class="modal-subtitle">Test 12.01.01 — Evaluating whether placing the Running category directly in primary navigation improves category discoverability.</p>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Experiment Metadata Area -->
+                <div class="experiment-meta-grid">
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Test Name</span>
+                        <span class="meta-pill-value"><i class="fas fa-tag text-teal"></i> Test 12.01.01</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Market</span>
+                        <span class="meta-pill-value"><i class="fas fa-globe-oceania text-indigo"></i> Australia (AU)</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Devices</span>
+                        <span class="meta-pill-value"><i class="fas fa-mobile-screen text-violet"></i> Mobile & Desktop</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Primary Goal</span>
+                        <span class="meta-pill-value"><i class="fas fa-compass text-emerald"></i> Category Discoverability</span>
+                    </div>
+                    <div class="meta-pill-item role-pill-full">
+                        <span class="meta-pill-label">Your Role</span>
+                        <div class="role-tags">
+                            <span class="tag-pill-sm highlight"><i class="fas fa-code"></i> A/B Test Development</span>
+                            <span class="tag-pill-sm highlight"><i class="fas fa-flask"></i> Experiment Implementation</span>
+                            <span class="tag-pill-sm"><i class="fas fa-laptop-code"></i> Frontend Development</span>
+                            <span class="tag-pill-sm"><i class="fas fa-check-double"></i> QA Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenge & Implementation -->
+                <div class="modal-grid">
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-circle-exclamation text-gradient-primary"></i> Challenge</h3>
+                            <p>The experiment evaluated whether adding "Running" directly to the main navigation could make the category easier to discover and reduce navigation steps for users looking for running products.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-laptop-code text-gradient-teal"></i> Implementation</h3>
+                            <p>Implemented the navigation retest using the updated navigation design while preserving the existing navigation structure, interactions, and responsive behavior.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-divider"></div>
+
+                <!-- Key Changes -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-sliders text-gradient-primary"></i> Key Changes</h3>
+                    <ul class="modal-features-list">
+                        <li>Added "Running" to the top-level navigation.</li>
+                        <li>Implemented the category link within the mobile navigation drawer.</li>
+                        <li>Preserved existing dropdown and submenu interactions.</li>
+                        <li>Maintained active and hover states.</li>
+                        <li>Optimized spacing and alignment.</li>
+                        <li>Validated the implementation across AU desktop and mobile viewports.</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-divider"></div>
+
+                <!-- Experiment Goal -->
+                <div class="modal-full-section highlight-bg">
+                    <h3><i class="fas fa-bullseye text-gradient-primary"></i> Experiment Goal</h3>
+                    <p>Evaluate whether placing the Running category directly in the primary navigation improves category discoverability and navigation progression.</p>
+                </div>
+
+                <div class="modal-divider"></div>
+
+                <!-- Potential KPIs -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-chart-simple text-gradient-teal"></i> Potential KPIs</h3>
+                    <div class="cro-metrics-grid">
+                        <span class="cro-metric-badge primary-goal"><i class="fas fa-person-running"></i> Running Navigation Clicks</span>
+                        <span class="cro-metric-badge"><i class="fas fa-percent"></i> Category CTR</span>
+                        <span class="cro-metric-badge"><i class="fas fa-list"></i> PLP Visits</span>
+                        <span class="cro-metric-badge"><i class="fas fa-mouse-pointer"></i> Navigation Interaction Rate</span>
+                        <span class="cro-metric-badge"><i class="fas fa-route"></i> User Journey Progression</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6: Application Form Redesign & UX -->
+    <div class="case-study-modal" id="modal-application-form">
+        <div class="modal-overlay"></div>
+        <div class="modal-container glass-card">
+            <button class="modal-close" aria-label="Close Case Study">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-tag tag-indigo">Experiment Implementation | Education / E-Learning</span>
+                <h2 class="modal-title">Application Form Redesign & UX</h2>
+                <p class="modal-subtitle">Responsive redesign of the application page with improved scrolling, sticky elements, and mobile layouts while keeping the existing form functionality intact.</p>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Experiment Metadata Area -->
+                <div class="experiment-meta-grid">
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Test Type</span>
+                        <span class="meta-pill-value"><i class="fas fa-layer-group text-teal"></i> A/B Test</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Sector</span>
+                        <span class="meta-pill-value"><i class="fas fa-graduation-cap text-indigo"></i> Education / E-Learning</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Devices</span>
+                        <span class="meta-pill-value"><i class="fas fa-mobile-screen text-violet"></i> Desktop, Tablet & Mobile</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Primary Focus</span>
+                        <span class="meta-pill-value"><i class="fas fa-shield-halved text-emerald"></i> UX & QA Validation</span>
+                    </div>
+                    <div class="meta-pill-item role-pill-full">
+                        <span class="meta-pill-label">Your Role</span>
+                        <div class="role-tags">
+                            <span class="tag-pill-sm highlight"><i class="fas fa-flask"></i> Experiment Implementation</span>
+                            <span class="tag-pill-sm"><i class="fas fa-laptop-code"></i> Frontend Development</span>
+                            <span class="tag-pill-sm"><i class="fas fa-check-double"></i> QA Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenge & Implementation -->
+                <div class="modal-grid">
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-circle-exclamation text-gradient-primary"></i> Challenge</h3>
+                            <p>The existing enrolment page had a long application form and needed a cleaner layout with better scrolling behavior. The redesign also required sticky elements, responsive layouts, and mobile-specific variations while maintaining the existing form functionality.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-laptop-code text-gradient-teal"></i> Implementation</h3>
+                            <p>Implemented the responsive application page based on the approved Figma design while preserving existing functionality, including file uploads and reCAPTCHA. Added custom scrolling behavior, sticky elements, and responsive layouts across desktop, tablet, and mobile.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-divider"></div>
+
+                <!-- Key Changes -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-sliders text-gradient-primary"></i> Key Changes</h3>
+                    <ul class="modal-features-list">
+                        <li>Redesigned the application page based on Figma.</li>
+                        <li>Implemented an independently scrollable application form.</li>
+                        <li>Added a sticky promotional banner on desktop.</li>
+                        <li>Created responsive layouts for desktop, tablet, and mobile.</li>
+                        <li>Prevented unwanted iOS input zoom behavior.</li>
+                        <li>Preserved existing form, file upload, and reCAPTCHA functionality.</li>
+                        <li>Prevented unwanted input zoom on iOS devices.</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-divider"></div>
+
+                <!-- Focus -->
+                <div class="modal-full-section highlight-bg">
+                    <h3><i class="fas fa-crosshairs text-gradient-primary"></i> Experiment Goal</h3>
+                    <p>To improve the application page experience through a cleaner responsive layout and better scrolling behavior while ensuring that the existing form functionality remains unchanged.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 7: PLP Content to Tab Navigation -->
+    <div class="case-study-modal" id="modal-plp-tab-navigation">
+        <div class="modal-overlay"></div>
+        <div class="modal-container glass-card">
+            <button class="modal-close" aria-label="Close Case Study">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-tag tag-teal">A/B Testing | Automotive / PLP</span>
+                <h2 class="modal-title">PLP Content to Tab Navigation</h2>
+                <p class="modal-subtitle">Convert the existing vertically stacked content sections on the Dekra PLP page into tabs to reduce page length and make the content easier to navigate.</p>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Experiment Metadata Area -->
+                <div class="experiment-meta-grid">
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Test Type</span>
+                        <span class="meta-pill-value"><i class="fas fa-vial text-teal"></i> Navigation A/B Test</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Market / Platform</span>
+                        <span class="meta-pill-value"><i class="fas fa-car text-indigo"></i> Education / Training</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Devices</span>
+                        <span class="meta-pill-value"><i class="fas fa-mobile-screen-button text-violet"></i> Mobile & Desktop</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Primary Goal</span>
+                        <span class="meta-pill-value"><i class="fas fa-bullseye text-emerald"></i> Improve user experience and content navigation</span>
+                    </div>
+                    <div class="meta-pill-item role-pill-full">
+                        <span class="meta-pill-label">Your Role</span>
+                        <div class="role-tags">
+                            <span class="tag-pill-sm highlight"><i class="fas fa-code"></i> A/B Test Development</span>
+                            <span class="tag-pill-sm highlight"><i class="fas fa-flask"></i> Experiment Implementation</span>
+                            <span class="tag-pill-sm"><i class="fas fa-laptop-code"></i> Frontend Development</span>
+                            <span class="tag-pill-sm"><i class="fas fa-check-double"></i> QA Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenge & Implementation -->
+                <div class="modal-grid">
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-circle-exclamation text-gradient-primary"></i> Challenge</h3>
+                            <p>The Dekra PLP page had multiple content sections displayed one after another, making the page long and requiring users to scroll through a large amount of content.<br>
+
+                            The goal was to organize this content in a more compact way without removing any existing information.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-laptop-code text-gradient-teal"></i> Implementation</h3>
+                            <p>The existing content sections were converted into a tab-based layout.<br>
+
+The tabs were placed directly below the hero section. Each tab contained the content from its corresponding section, allowing users to switch between sections without scrolling through the entire page.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-divider"></div>
+
+                <!-- Key Changes -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-sliders text-gradient-primary"></i> Key Changes</h3>
+                    <ul class="modal-features-list">
+                        <li>Converted stacked content sections into tabs</li>
+                        <li>Added the tab navigation below the hero section</li>
+                        <li>Moved each existing section's content into its corresponding tab</li>
+                        <li>Kept the existing content while reducing the amount of vertical scrolling</li>
+                        <li>Implemented the layout for both desktop and mobile devices</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-divider"></div>
+
+                <!-- Experiment Goal -->
+                <div class="modal-full-section highlight-bg">
+                    <h3><i class="fas fa-bullseye text-gradient-primary"></i> Experiment Goal</h3>
+                    <p>The main goal was to make the Dekra PLP easier to navigate by reducing page length and presenting the existing content in a cleaner, more organized layout.<br>
+
+                    The test was intended to check whether a tab-based structure could improve content interaction and overall user experience.</p>
+                </div>
+
+                <div class="modal-divider"></div>
+
+                <!-- Potential KPIs -->
+                <!-- <div class="modal-full-section">
+                    <h3><i class="fas fa-chart-simple text-gradient-teal"></i> Potential KPIs</h3>
+                    <div class="cro-metrics-grid">
+                        <span class="cro-metric-badge primary-goal"><i class="fas fa-star"></i> Tab Interaction Rate</span>
+                        <span class="cro-metric-badge"><i class="fas fa-chart-line"></i> Content Engagement</span>
+                        <span class="cro-metric-badge"><i class="fas fa-arrows-up-down"></i> Scroll Depth</span>
+                        <span class="cro-metric-badge"><i class="fas fa-eye"></i> PLP Engagement</span>
+                        <span class="cro-metric-badge"><i class="fas fa-cube"></i> Product Interactions</span>
+                        <span class="cro-metric-badge"><i class="fas fa-arrow-trend-up"></i> Conversion Rate</span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 8: Sliding Mini Cart Redesign & Checkout -->
+    <div class="case-study-modal" id="modal-sliding-mini-cart">
+        <div class="modal-overlay"></div>
+        <div class="modal-container glass-card">
+            <button class="modal-close" aria-label="Close Case Study">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-tag tag-indigo">Frontend / CRO Implementation | E-Commerce</span>
+                <h2 class="modal-title">Sliding Mini Cart Redesign & Checkout</h2>
+                <p class="modal-subtitle">Replace the existing notification-style cart with an interactive sliding cart that allows users to view and manage their cart without leaving the product page.</p>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Experiment Metadata Area -->
+                <div class="experiment-meta-grid">
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Test Type</span>
+                        <span class="meta-pill-value"><i class="fas fa-layer-group text-teal"></i> Frontend / CRO</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Market / Platform</span>
+                        <span class="meta-pill-value"><i class="fas fa-shop text-indigo"></i> E-Commerce</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Devices</span>
+                        <span class="meta-pill-value"><i class="fas fa-desktop text-violet"></i> Desktop & Mobile</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Primary Focus</span>
+                        <span class="meta-pill-value"><i class="fas fa-plug text-emerald"></i> API & Cart UX</span>
+                    </div>
+                     <div class="meta-pill-item">
+                        <span class="meta-pill-label">Test Page</span>
+                        <span class="meta-pill-value"><i class="fas fa-plug text-emerald"></i> Product Page</span>
+                    </div>
+                    <div class="meta-pill-item role-pill-full">
+                        <span class="meta-pill-label">Your Role</span>
+                        <div class="role-tags">
+                            <span class="tag-pill-sm highlight"><i class="fas fa-laptop-code"></i> Frontend Development</span>
+                            <span class="tag-pill-sm highlight"><i class="fas fa-flask"></i> Experiment Implementation</span>
+                            <span class="tag-pill-sm"><i class="fas fa-plug"></i> API Integration</span>
+                            <span class="tag-pill-sm"><i class="fas fa-check-double"></i> QA Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenge & Implementation -->
+                <div class="modal-grid">
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-circle-exclamation text-gradient-primary"></i> Challenge</h3>
+                            <p>The existing Add to Cart experience used a notification-style cart, which provided limited visibility of the cart and required users to navigate to the cart page for further actions.<br>
+
+                            The test aimed to provide a more accessible cart experience directly from the product page, while also addressing usability issues such as cart updates, quantity changes, product removal, and checkout access.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-laptop-code text-gradient-teal"></i> Implementation</h3>
+                            <p>Checked the existing Cart API to understand and fetch the cart data, then used the API response to dynamically display products, prices, quantities, and cart totals in the new slider cart. Rebuilt the existing cart UI based on the Figma design and implemented quantity updates, product removal, dynamic total updates, empty-cart state, and checkout functionality, followed by responsive QA on desktop and mobile.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-divider"></div>
+
+                <!-- Key Changes -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-sliders text-gradient-primary"></i> Key Changes</h3>
+                    <ul class="modal-features-list">
+                        <li>Replaced the existing notification cart with a sliding cart.</li>
+                        <li>Integrated the Cart API for dynamic cart data.</li>
+                        <li>Added quantity update and product removal functionality.</li>
+                        <li>Implemented dynamic cart total updates.</li>
+                        <li>Added a prominent Checkout CTA.</li>
+                        <li>Added empty cart state with Continue Shopping.</li>
+                        <li>Matched the Figma design and improved responsive layout.</li>
+                        <li>Added smooth cart drawer interactions.</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-divider"></div>
+
+                <!-- Focus -->
+                <div class="modal-full-section highlight-bg">
+                    <h3><i class="fas fa-crosshairs text-gradient-primary"></i> Focus</h3>
+                    <p>Frontend architecture, API integration, responsive implementation, cart functionality, and QA. Engineered to maintain seamless synchronization with the store's existing backend state.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 9: Mini Cart UX & Conversion Optimization -->
+    <div class="case-study-modal" id="modal-mini-cart-optimization">
+        <div class="modal-overlay"></div>
+        <div class="modal-container glass-card">
+            <button class="modal-close" aria-label="Close Case Study">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-tag tag-teal">CRO Implementation | E-Commerce / Cart</span>
+                <h2 class="modal-title">Benisouk Minicart</h2>
+                <p class="modal-subtitle">Test a minicart drawer after Add to Cart instead of redirecting users to the cart page, allowing users to review their cart and continue directly to checkout.</p>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Experiment Metadata Area -->
+                <div class="experiment-meta-grid">
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Test Type</span>
+                        <span class="meta-pill-value"><i class="fas fa-bag-shopping text-teal"></i> A/B Test</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Market / Platform</span>
+                        <span class="meta-pill-value"><i class="fas fa-cart-shopping text-indigo"></i> E-Commerce / Cart</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Devices</span>
+                        <span class="meta-pill-value"><i class="fas fa-display text-violet"></i> Mobile, Tablet & Desktop</span>
+                    </div>
+                    <div class="meta-pill-item">
+                        <span class="meta-pill-label">Primary Focus</span>
+                        <span class="meta-pill-value"><i class="fas fa-credit-card text-emerald"></i> Checkout Transition</span>
+                    </div>
+                    <div class="meta-pill-item role-pill-full">
+                        <span class="meta-pill-label">Your Role</span>
+                        <div class="role-tags">
+                            <span class="tag-pill-sm highlight"><i class="fas fa-laptop-code"></i> Frontend Development</span>
+                            <span class="tag-pill-sm highlight"><i class="fas fa-flask"></i> Experiment Implementation</span>
+                            <span class="tag-pill-sm"><i class="fas fa-check-double"></i> QA Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenge & Implementation -->
+                <div class="modal-grid">
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-circle-exclamation text-gradient-primary"></i> Challenge</h3>
+                            <p>The existing flow redirected users to the cart page after adding a product. The test aimed to introduce a minicart drawer directly on the PDP so users could review their cart and proceed to checkout without leaving the product page.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-laptop-code text-gradient-teal"></i> Implementation</h3>
+                            <p>Implemented the minicart drawer on PDPs and connected it with the existing cart flow to display cart data dynamically after Add to Cart. Added checkout, continue shopping, and close functionality, with the subtotal section fixed at the bottom on desktop and mobile. Also implemented and verified the required GA4 events for Add to Cart, Begin Checkout, Continue Shopping, and Minicart Close.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-divider"></div>
+
+                <!-- Key Changes -->
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-sliders text-gradient-primary"></i> Key Changes</h3>
+                    <ul class="modal-features-list">
+                        <li>Replaced the cart-page redirect with a minicart drawer after Add to Cart.</li>
+                        <li>Integrated the existing cart data/API to display products and subtotal dynamically.</li>
+                        <li>Made the subtotal section sticky at the bottom on desktop and mobile.</li>
+                        <li>Implemented GA4 event tracking for key user interactions.</li>
+                        <li>Implemented slide-over interactions.Updated checkout flow to send users directly to checkout instead of /cart.</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-divider"></div>
+
+                <!-- Focus -->
+                <div class="modal-full-section highlight-bg">
+                    <h3><i class="fas fa-crosshairs text-gradient-primary"></i> Experiment Goal</h3>
+                    <p>To determine whether triggering a minicart drawer after Add to Cart, instead of redirecting users to the cart page, reduces friction and improves checkout rate and overall conversion rate.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 10: Full-Stack Project (Mobile Shopee) -->
+    <div class="case-study-modal" id="modal-mobile-shopee">
+        <div class="modal-overlay"></div>
+        <div class="modal-container glass-card">
+            <button class="modal-close" aria-label="Close Case Study">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-tag tag-indigo"><i class="fas fa-layer-group"></i> Full-Stack Development | Live Project</span>
+                <h2 class="modal-title">E-Commerce Web Application (Mobile Shopee)</h2>
+                <p class="modal-subtitle">Full-stack e-commerce web application developed using HTML5, CSS3, JavaScript, Bootstrap, PHP, and MySQL.</p>
+                <div class="modal-header-actions">
+                    <a href="https://mobileshopee-ecommerce.freedev.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-live-site" style="font-size: 0.88rem; padding: 0.55rem 1.35rem;">
+                        <span class="live-status-indicator"></span>
+                        <i class="fas fa-globe"></i>
+                        <span>Live Website</span>
+                        <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 0.25rem;"></i>
+                    </a>
+                    <a href="https://github.com/siddharthsingh125/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size: 0.88rem; padding: 0.55rem 1.35rem;">
+                        <i class="fab fa-github"></i>
+                        <span>Source Code</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-circle-exclamation text-gradient-primary"></i> Challenge</h3>
+                            <p>The objective was to create a functional e-commerce platform capable of handling dynamic product data, user authentication, and responsive layouts. The application needed to provide a smooth shopping experience while maintaining an organized backend for managing products and users.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-col">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-lightbulb text-gradient-teal"></i> Solution</h3>
+                            <p>Developed a complete web application using PHP and MySQL for backend functionality and HTML, CSS, and JavaScript for the frontend. The system was designed to deliver a responsive user interface, secure user authentication, dynamic product management, and efficient database operations.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-route text-gradient-primary"></i> Architecture & Approach</h3>
+                    <p>The project was planned by dividing it into frontend, backend, and database modules. Responsive interfaces were first designed using HTML and CSS, followed by interactive features with JavaScript. PHP and MySQL were then integrated to handle user authentication, product management, and dynamic content rendering. Finally, the application was tested to ensure smooth navigation, responsive layouts, and reliable functionality across devices.</p>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <div class="modal-full-section">
+                    <h3><i class="fas fa-square-check text-gradient-teal"></i> Key Features & Implementation</h3>
+                    <ul class="modal-features-list">
+                        <li>Developed a fully responsive e-commerce website.</li>
+                        <li>Designed modern and user-friendly interfaces.</li>
+                        <li>Implemented user registration and login authentication.</li>
+                        <li>Built dynamic product listing pages.</li>
+                        <li>Integrated PHP with MySQL for database management.</li>
+                        <li>Developed admin product management functionality.</li>
+                        <li>Implemented responsive layouts for desktop and mobile.</li>
+                        <li>Added client-side form validation.</li>
+                        <li>Managed dynamic content rendering using PHP.</li>
+                        <li>Organized project using clean and maintainable code structure.</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-divider"></div>
+                
+                <div class="modal-full-section highlight-bg">
+                    <h3><i class="fas fa-chart-line text-gradient-primary"></i> Technical Impact</h3>
+                    <p>This project strengthened my understanding of full-stack web development by combining frontend technologies with backend programming and database management. It enhanced my practical experience in building dynamic web applications, implementing authentication systems, and developing responsive user interfaces.</p>
+                </div>
+
+                <div class="modal-cta-box">
+                    <div>
+                        <h4 class="modal-cta-title">Explore Mobile Shopee Live</h4>
+                        <!-- <p class="modal-cta-desc">Experience the full responsive e-commerce web app, cart, wishlist, and dashboard live.</p> -->
+                    </div>
+                    <a href="https://mobileshopee-ecommerce.freedev.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-live-site">
+                        <span class="live-status-indicator"></span>
+                        <i class="fas fa-globe"></i>
+                        <span>Live Website</span>
+                        <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.8rem; margin-left: 0.2rem;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fullscreen Image Modal -->
+    <div class="fullscreen-image-modal" id="fullscreen-image-modal">
+        <button class="modal-close" aria-label="Close Fullscreen">&times;</button>
+        <div class="fullscreen-content-wrapper">
+            <!-- Content injected dynamically by JS -->
+        </div>
+    </div>
+
+    <!-- Global Javascript File -->
+    <script src="script.js"></script>
+</body>
+</html>
